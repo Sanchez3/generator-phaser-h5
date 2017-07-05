@@ -1,0 +1,38 @@
+{
+  "name": "H5",
+  "description": "",
+  "readme": "",
+  "repository": "",
+  "version": "0.0.0",
+  "devDependencies": {
+    "better-picker": "^1.1.3",
+    "bower": "*",
+    "browserify": "^13.0.0",
+    "del": "^3.0.0",
+    "gulp": "*",
+    "gulp-connect": "*",
+    "gulp-download": "*",
+    "gulp-if": "^2.0.0",
+    "gulp-jshint": "*",
+    "gulp-minify-css": "*",
+    "gulp-minify-html": "*",
+    "gulp-processhtml": "*",
+    "gulp-rename": "*",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "*",
+    "gulp-watch": "*",
+    "pump": "^1.0.2",
+    "tiny-lr": "^1.0.5",
+    "vinyl-paths": "^2.1.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  },
+  "scripts": {
+    "post-install": "node ./node_modules/bower/bin/bower install",
+    "start": "node ./node_modules/gulp/bin/gulp.js",
+    "build": "node ./node_modules/gulp/bin/gulp.js build"
+  },
+  "dependencies": {
+    "jshint": "^2.8.0"
+  }
+}

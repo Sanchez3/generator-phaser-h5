@@ -1,0 +1,16 @@
+{
+    "name": "H5",
+    "version": "1.0.0",
+    "authors": [
+        "Sanchez Liu"
+    ],
+    "dependencies": {
+        "phaser-official": "latest",
+        "howler.js": "howler#~1.1.29",
+        "jquery": "~2.2.1",
+        "Swiper": "swiper#~3.3.1",
+        "Chart.js": "~1.0.2",
+        "animate.css": "^3.5.2",
+        "gsap": "GreenSock-JS#~1.18.2"
+    }
+}
