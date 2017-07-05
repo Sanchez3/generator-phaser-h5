@@ -1,4 +1,5 @@
 #基于phaser的前端h5项目目录快速生成器
+
 ##安装
 1.  **Get [Yeoman][yo__] and `generator-phaser-h5` via [npm][npm_].**
 
@@ -12,7 +13,7 @@
     ```sh
     mkdir myproject
     cd myproject
-    ```
+    ```∏
 
 3. **Create your new game project.**
 
