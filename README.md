@@ -26,7 +26,7 @@
 ----------------
 [Generator API](http://yeoman.github.io/generator/)
 
-[Create Phaser Web games using Browserify, BrowserSync, Gulp and more.](https://github.com/rblopes/generator-phaser-plus)
+[generator-phaser-plus](https://github.com/rblopes/generator-phaser-plus)
 
 [开发自己的 yeoman 脚手架（generator-reactpackage）](https://juejin.im/entry/57c938510e3dd90063e3c725)
 
