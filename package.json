@@ -9,6 +9,10 @@
     "keywords": [
         "yeoman-generator"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Sanchez3/generator-phaser-h5.git"
+    },
     "author": "SanchezLiu",
     "license": "MIT",
     "dependencies": {
