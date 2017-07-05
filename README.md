@@ -13,7 +13,7 @@
     ```sh
     mkdir myproject
     cd myproject
-    ```∏
+    ```
 
 3. **Create your new game project.**
 
