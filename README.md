@@ -2,7 +2,7 @@
 ---------------------------------
 安装
 ----------------
-1.  **Get [Yeoman][yo__] and `generator-phaser-plus` via [npm][npm_].**
+1.  **Get [Yeoman][yo__] and `generator-phaser-h5` via [npm][npm_].**
 
 	 ```sh
 	    npm install --global yo                    # Install Yeoman if you don't have it yet.
