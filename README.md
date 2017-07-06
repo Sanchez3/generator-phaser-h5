@@ -68,7 +68,7 @@
     │   └── js
     │       └── main.min.js
     └── index.html
-
+  
 ## 参考资料
 
 [Generator API](http://yeoman.github.io/generator/)
