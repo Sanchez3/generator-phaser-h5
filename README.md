@@ -1,4 +1,6 @@
-# 基于phaser的前端h5项目目录快速生成器
+# 前端h5项目目录快速生成器
+起初是基于phaser的。
+若不使用phaser，仍可利用[Gulp](http://gulpjs.com/)自动化构建工具，利用[Bower](https://bower.io/)添加所要用的插件 eg. threejs, pixi
 
 ## 安装
 >Note:  Intstall [Node.js](https://nodejs.org/en/), [Gulp](http://gulpjs.com/), [Bower](https://bower.io/) First
@@ -30,7 +32,17 @@
     gulp build    #'clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml'
     ```
 
-    ​
+## 常用插件
+[Bower](https://bower.io/)管理插件
+
+* [phaser-official](https://phaser.io/): for HTML5 games and 2d canvas
+* [howler.js]()  for audio 
+* [jquery](): for ajax 
+* [Swiper](http://idangero.us/swiper/) for slider 
+* [Chart.js](http://www.chartjs.org/) for chart
+* [animate.css](https://daneden.github.io/animate.css/)  for CSS animation style 
+* [Gsap](https://greensock.com/gsap) for javascript animation
+
 
 
 ## 文档目录结构
@@ -43,7 +55,7 @@
     │   │   └── css.css
     │   ├── js
     │   │   ├── entities
-    │   │   ├── states
+    │   │   ├── states    #phaser state
     │   │   │
     │   │   └── main.js
     │   │
@@ -68,7 +80,7 @@
     │   └── js
     │       └── main.min.js
     └── index.html
-  
+
 ## 参考资料
 
 [Generator API](http://yeoman.github.io/generator/)
@@ -78,4 +90,5 @@
 [开发自己的 yeoman 脚手架（generator-reactpackage）](https://juejin.im/entry/57c938510e3dd90063e3c725)
 
 ## License
+
 [MIT License](https://github.com/Sanchez3/generator-phaser-h5/blob/master/LICENSE)
