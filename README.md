@@ -53,8 +53,8 @@
     ├── index.html
     ├── package.json
     ├── gulpfile.js
-    ├── bower.json
-    ├── .jshintrc        
+    ├── .jshintrc
+    ├── bower.json     
     └── .bowerrc 
 
 ## 参考资料
