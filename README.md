@@ -57,6 +57,18 @@
     ├── bower.json     
     └── .bowerrc 
 
+## 打包文档目录 `gulp build`
+
+    ├── src
+    │   ├── assets
+    │   │   ├── img
+    │   │   └── video
+    │   ├── css
+    │   │   └── css.min.css
+    │   └── js
+    │       └── main.min.js
+    └── index.html
+
 ## 参考资料
 
 [Generator API](http://yeoman.github.io/generator/)
