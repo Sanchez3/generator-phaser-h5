@@ -1,7 +1,9 @@
 # 基于phaser的前端h5项目目录快速生成器
 
 ## 安装
-1. **Get [Yeoman][yo__] and `generator-phaser-h5` via [npm][npm_].**
+>Note:  Intstall [Node.js](https://nodejs.org/en/), [Gulp](http://gulpjs.com/), [Bower](https://bower.io/) First
+
+1. **Get [Yeoman](http://yeoman.io/) and **`generator-phaser-h5` via [npm](https://www.npmjs.com/).**
 
    ```sh
        npm install --global yo                    # Install Yeoman if you don't have it yet.
@@ -21,7 +23,42 @@
     yo phaser-h5
     ```
 
+4. **Launch it!**
+
+    ```sh
+    gulp          #'connect', 'watch', 'build'
+    gulp build    #'clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml'
+    ```
+
+    ​
+
+
+## 文档目录结构
+
+    ├── src
+    │   ├── assets
+    │   │   ├── img
+    │   │   └── video
+    │   ├── css
+    │   │   └── css.css
+    │   ├── js
+    │   │   ├── entities
+    │   │   ├── states
+    │   │   │
+    │   │   └── main.js
+    │   │
+    │   └── bower_components
+    │
+    ├── node_modules
+    ├── index.html
+    ├── package.json
+    ├── gulpfile.js
+    ├── bower.json
+    ├── .jshintrc        
+    └── .bowerrc 
+
 ## 参考资料
+
 [Generator API](http://yeoman.github.io/generator/)
 
 [generator-phaser-plus](https://github.com/rblopes/generator-phaser-plus)
