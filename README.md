@@ -5,7 +5,7 @@
 ## 安装
 >Note:  Intstall [Node.js](https://nodejs.org/en/), [Gulp](http://gulpjs.com/), [Bower](https://bower.io/) First
 
-1. **Get [Yeoman](http://yeoman.io/) and **`generator-phaser-h5` via [npm](https://www.npmjs.com/).**
+1. **Get  [Yeoman](http://yeoman.io/) and`generator-phaser-h5` via [npm](https://www.npmjs.com/). **
 
    ```sh
        npm install --global yo                    # Install Yeoman if you don't have it yet.
