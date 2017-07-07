@@ -3,7 +3,7 @@
 若不使用phaser，仍可利用[Gulp](http://gulpjs.com/)自动化构建工具，利用[Bower](https://bower.io/)添加所要用的插件 eg. threejs, pixi
 
 ## 安装
->Note:  Intstall [Node.js](https://nodejs.org/en/), [Gulp](http://gulpjs.com/), [Bower](https://bower.io/) First
+>Note:  Install [Node.js](https://nodejs.org/en/), [Gulp](http://gulpjs.com/), [Bower](https://bower.io/) First
 
 1. **Get  [Yeoman](http://yeoman.io/) and`generator-phaser-h5` via [npm](https://www.npmjs.com/).**
 
