@@ -32,11 +32,15 @@
     gulp build    #'clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml'
     ```
 
+
+The result in  `dist/`
+
 ## 常用插件
+
 [Bower](https://bower.io/)管理插件
 
 * [phaser-official](https://phaser.io/): for HTML5 games and 2d canvas
-* [howler.js]()  for audio 
+* [howler.js](https://howlerjs.com/)  for audio 
 * [jquery](): for ajax 
 * [Swiper](http://idangero.us/swiper/) for slider 
 * [Chart.js](http://www.chartjs.org/) for chart
@@ -47,6 +51,7 @@
 
 ## 文档目录结构
 
+```sh
     ├── src
     │   ├── assets
     │   │   ├── img
@@ -59,7 +64,7 @@
     │   │   │
     │   │   └── main.js
     │   │
-    │   └── bower_components
+    │   └── bower_components  #js libraries
     │
     ├── node_modules
     ├── index.html
@@ -68,9 +73,11 @@
     ├── .jshintrc
     ├── bower.json     
     └── .bowerrc 
+```
 
 ## 打包文档目录 `gulp build`
 
+```sh
     ├── src
     │   ├── assets
     │   │   ├── img
@@ -80,6 +87,7 @@
     │   └── js
     │       └── main.min.js
     └── index.html
+```
 
 ## 参考资料
 
