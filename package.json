@@ -1,6 +1,6 @@
 {
     "name": "generator-phaser-h5",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "description": "A Yeoman generator to generate HTML5 games with phaser.js",
     "main": "index.js",
     "scripts": {
