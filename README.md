@@ -41,7 +41,7 @@ The result in  `dist/`
 
 * [phaser-official](https://phaser.io/): for HTML5 games and 2d canvas
 * [howler.js](https://howlerjs.com/)  for audio 
-* [jquery](): for ajax 
+* [jquery](https://jquery.com/): for ajax 
 * [Swiper](http://idangero.us/swiper/) for slider 
 * [Chart.js](http://www.chartjs.org/) for chart
 * [animate.css](https://daneden.github.io/animate.css/)  for CSS animation style 
