@@ -5,17 +5,17 @@ var yeoman = require('yeoman-generator');
 var yosay = require('yosay'); //yeoman弹出框
 var path = require('path');
 var updateNotifier = require('update-notifier');
-var pkg = require('../package.json');
+// var pkg = require('../package.json');
 
 var H5package = yeoman.Base.extend({
     info: function() {
-        var notifier = updateNotifier({ pkg });
+        // var notifier = updateNotifier({ pkg });
         // Notify using the built-in convenience method 
-        notifier.notify();
+        // notifier.notify();
         // `notifier.update` contains some useful info about the update
-        this.log(chalk.red(
-            'notifier.update'
-        ));
+        // this.log(chalk.red(
+        //     'notifier.update'
+        // ));
         this.log(chalk.green(
             'Start Build'
         ));
