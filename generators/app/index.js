@@ -26,11 +26,7 @@ var H5package = yeoman.Base.extend({
     },
     install: function() { //安装依赖
         this.installDependencies({
-            bower: true,
-            npm: true,
-            callback: function() {
-                console.log('Install Dependencies!');
-            }
+            skipInstall: this.options['skip-install']
         });
     },
     end: function() {
