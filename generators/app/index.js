@@ -14,11 +14,9 @@ var H5package = yeoman.Base.extend({
     generateBasic: function() { //按照自己的templates目录自定义
         this.directory('src', 'src'); //拷贝目录
         this.copy('package.json', 'package.json'); //拷贝文件
-        this.copy('.bowerrc', '.bowerrc');
         this.copy('.jshintrc', '.jshintrc');
         // this.copy('README.md', 'README.md');
         this.copy('gulpfile.js', 'gulpfile.js');
-        this.copy('bower.json', 'bower.json');
     },
     generateClient: function() {
         this.sourceRoot(path.join(__dirname, 'templates'));

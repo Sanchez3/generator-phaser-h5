@@ -1,9 +1,9 @@
 # 前端h5项目目录快速生成器
 起初是基于phaser的。
-若不使用phaser，仍可利用[Gulp](http://gulpjs.com/)自动化构建工具，利用[Bower](https://bower.io/)添加所要用的插件 eg. threejs, pixijs
+若不使用phaser，仍可利用[Gulp](http://gulpjs.com/)自动化构建工具，~~利用[Bower](https://bower.io/)添加所要用的插件 eg. threejs, pixijs~~
 
 ## 安装
->Note:  Install [Node.js](https://nodejs.org/en/), [Gulp](http://gulpjs.com/), [Bower](https://bower.io/) First
+>Note:  Install [Node.js](https://nodejs.org/en/), [Gulp](http://gulpjs.com/), ~~[Bower](https://bower.io/)~~First
 
 1. **Get  [Yeoman](http://yeoman.io/) and`generator-phaser-h5` via [npm](https://www.npmjs.com/).**
 
@@ -37,7 +37,7 @@ The result in  `dist/`
 
 ## 常用插件
 
-[Bower](https://bower.io/)管理插件
+~~[Bower](https://bower.io/)管理插件~~
 
 * [phaser-official](https://phaser.io/): for HTML5 games and 2d canvas
 * [howler.js](https://howlerjs.com/)  for audio 
@@ -70,9 +70,7 @@ The result in  `dist/`
     ├── index.html
     ├── package.json
     ├── gulpfile.js
-    ├── .jshintrc
-    ├── bower.json     
-    └── .bowerrc 
+    └── .jshintrc   
 ```
 
 ## 打包文档目录 `gulp build`
