@@ -15,7 +15,7 @@
     "gulp-if": "latest",
     "gulp-jshint": "latest",
     "gulp-clean-css": "latest",
-    "gulp-minify-html": "latest",
+    "gulp-htmlmin": "latest",
     "gulp-processhtml": "latest",
     "gulp-rename": "latest",
     "gulp-streamify": "latest",
