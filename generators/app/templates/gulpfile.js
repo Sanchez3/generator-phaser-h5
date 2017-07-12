@@ -1,8 +1,8 @@
 var gulp = require('gulp'),
     del = require('del'),
     rename = require('gulp-rename'),
-    minifycss = require('gulp-clean-css'),
-    minifyhtml = require('gulp-htmlmin'),
+    minifycss = require('gulp-minify-css'),
+    minifyhtml = require('gulp-minify-html'),
     processhtml = require('gulp-processhtml'),
     jshint = require('gulp-jshint'),
     streamify = require('gulp-streamify'),
@@ -19,8 +19,8 @@ var gulp = require('gulp'),
 var watching = false;
 
 paths = {
-    assets: 'src/assets/**/*',
-    css: ['src/css/*.css'],
+    assets: ['src/assets/**/*','!src/assets/css/*','!src/assets/js/*','!src/assets/js/**/*.js'],
+    css: ['src/assets/css/*.css'],
     libs: [
         './src/bower_components/Swiper/dist/js/swiper.jquery.min.js',
         './src/bower_components/phaser-official/build/custom/phaser-no-physics.min.js',
@@ -31,33 +31,34 @@ paths = {
         './src/bower_components/progressbar.js/dist/progressbar.min.js',
         // './src/bower_components/distpicker/dist/distpicker.min.js',
     ],
-    js: ['src/js/*.js', 'src/js/**/*.js'],
-    entry: './src/js/main.js',
-    dist: './dist/',
-    distcss: './dist/css/',
-    distjs: './dist/js'
+    js: ['src/assets/js/*.js', 'src/assets/js/**/*.js'],
+    entry: './src/assets/js/main.js',
+    dist: './dist/assets/',
+    distcss: './dist/assets/css/',
+    distjs: './dist/assets/js'
 };
 
 gulp.task('clean', function(cb) {
     pump([
-        gulp.src(paths.dist),
+        gulp.src('./dist'),
         vinylPaths(del)
     ], cb);
 });
 
 gulp.task('copy', ['clean'], function(cb) {
     pump([gulp.src(paths.assets),
-        gulp.dest(paths.dist + 'assets')
-    ], cb);
-
-});
-
-gulp.task('copylibs', ['clean'], function(cb) {
-    pump([gulp.src(paths.libs),
-        gulpif(!watching, uglify()),
-        gulp.dest(paths.dist + 'js/lib')
+        gulp.dest(paths.dist)
     ], cb);
 });
+
+
+// gulp.task('copylibs', ['clean'], function(cb) {
+
+//     pump([gulp.src(paths.libs),
+//         gulpif(!watching, uglify()),
+//         gulp.dest(paths.dist + 'js/lib')
+//     ], cb);
+// });
 
 gulp.task('compile', ['clean'], function(cb) {
     // var bundler = browserify({
@@ -110,7 +111,7 @@ gulp.task('processhtml', ['clean'], function(cb) {
     pump([
         gulp.src('src/index.html'),
         processhtml({}),
-        gulp.dest(paths.dist)
+        gulp.dest('./dist/')
     ], cb);
 });
 
@@ -118,7 +119,7 @@ gulp.task('minifyhtml', ['processhtml'], function(cb) {
     pump([
         gulp.src('dist/index.html'),
         gulpif(!watching, minifyhtml()),
-        gulp.dest(paths.dist)
+        gulp.dest('./dist/')
     ], cb);
 
 });

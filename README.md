@@ -57,14 +57,14 @@ The result in  `dist/`
     ├── src
     │   ├── assets
     │   │   ├── img
-    │   │   └── video
-    │   ├── css
-    │   │   └── css.css
-    │   ├── js
-    │   │   ├── entities
-    │   │   ├── states    #phaser state
-    │   │   │
-    │   │   └── main.js
+    │   │   ├── video
+    │   │   ├── css
+    │   │   │   └── css.css
+    │   │   └── js
+    │   │       ├── entities
+    │   │       ├── states    #phaser state
+    │   │       │
+    │   │       └── main.js
     │   │
     │   └── bower_components  #js libraries
     │
@@ -78,14 +78,15 @@ The result in  `dist/`
 ## 打包文档目录 `gulp build`
 
 ```sh
-    ├── src
-    │   ├── assets
-    │   │   ├── img
-    │   │   └── video
+   dist
+    ├── assets
+    │   ├── img
+    │   ├── video
     │   ├── css
     │   │   └── css.min.css
     │   └── js
     │       └── main.min.js
+    │
     └── index.html
 ```
 
