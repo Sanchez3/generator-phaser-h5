@@ -145,4 +145,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['connect', 'watch', 'build']);
-gulp.task('build', ['clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml']);
+gulp.task('build', ['clean', 'copy', 'compile', 'minifycss', 'processhtml', 'minifyhtml']);
