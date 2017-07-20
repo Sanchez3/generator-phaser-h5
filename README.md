@@ -65,6 +65,7 @@ The result in  `dist/`
 - [jquery](https://jquery.com/)  for ajax 
 - [Gsap](https://greensock.com/gsap) for javascript animation
 - [animate.css](https://daneden.github.io/animate.css/)  for CSS animation style 
+- [AlloyImage](https://github.com/AlloyTeam/AlloyImage)  for image processing lib
 
 
 ### others:
