@@ -5,7 +5,6 @@
   "repository": "",
   "version": "0.0.0",
   "devDependencies": {
-    "better-picker": "latest",
     "browserify": "latest",
     "del": "latest",
     "gulp": "latest",
@@ -26,6 +25,13 @@
     "vinyl-source-stream": "latest",
     "watchify": "latest",
     "jshint": "latest"
+  },
+  "dependencies": {
+    "howler": "latest",
+    "jquery": "latest",
+    "gsap": "latest",
+    "phaser": "latest",
+    "animate.css":"latest"
   },
   "scripts": {
     "post-install": "node ./node_modules/bower/bin/bower install",

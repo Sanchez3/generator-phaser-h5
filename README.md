@@ -1,10 +1,17 @@
 # 前端h5项目目录快速生成器
+**h5 ≠ `<h5></h5>` ,  h5 ≠ html5,  h5 ≠ car haval5. **
+
+**h5 = Web page or Web app etc.**
+
+[How do you think of some Chinese call HTML5 'H5'](https://news.ycombinator.com/item?id=9875940)
+
 起初是基于phaser的。
 若不使用phaser，仍可利用[Gulp](http://gulpjs.com/)自动化构建工具。
 ~~利用[Bower](https://bower.io/)添加所要用的插件eg. threejs, pixijs~~
+
 >Note:...psst! While Bower is maintained, we recommend yarn and webpack for new front-end projects!
 
-## 安装
+## 安装/Usage
 >Note:  Install [Node.js](https://nodejs.org/en/), [Gulp](http://gulpjs.com/), ~~[Bower](https://bower.io/)~~ First
 
 1. **Get  [Yeoman](http://yeoman.io/) and`generator-phaser-h5` via [npm](https://www.npmjs.com/).**
@@ -39,16 +46,34 @@ The result in  `dist/`
 
 ## 常用插件
 
-~~[Bower](https://bower.io/)管理插件~~
+~~[Bower](https://bower.io/)管理插件~~ 
 
-* [phaser-official](https://phaser.io/): for HTML5 games and 2d canvas
-* [howler.js](https://howlerjs.com/)  for audio 
-* [jquery](https://jquery.com/): for ajax 
-* [Swiper](http://idangero.us/swiper/) for slider 
-* [Chart.js](http://www.chartjs.org/) for chart
-* [animate.css](https://daneden.github.io/animate.css/)  for CSS animation style 
-* [Gsap](https://greensock.com/gsap) for javascript animation
+通过npm管理插件，devDependencies  里面的插件只用于开发环境，不用于生产环境，而 dependencies  是需要发布到生产环境的。
 
+### devDependencies:
+*Note:  `npm install <packages>`*
+
+- [browserify](https://github.com/substack/node-browserify)  for bundling up all of your dependencies.
+- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml' task
+- [jshint](http://jshint.com/)  for Static Code Analysis Tool
+
+### dependencies:
+*Note:  `npm install <packages> --save-dev`*
+
+- [phaser-official](https://phaser.io/)  for HTML5 games and 2d canvas
+- [howler.js](https://howlerjs.com/)  for audio 
+- [jquery](https://jquery.com/)  for ajax 
+- [Gsap](https://greensock.com/gsap) for javascript animation
+- [animate.css](https://daneden.github.io/animate.css/)  for CSS animation style 
+
+
+### others:
+*Note: Their Documentation For a Getting started guide, Usage , API docs, etc. check out or docs!*
+
+- [better-picker](https://github.com/ustbhuangyi/picker)  for  address picker 
+- [Swiper](http://idangero.us/swiper/) for slider
+- [Chart.js](http://www.chartjs.org/) for chart
+- [tracking.js](https://github.com/eduardolundgren/tracking.js)  for tracking  face etc.
 
 
 ## 文档目录结构

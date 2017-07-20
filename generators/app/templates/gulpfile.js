@@ -1,8 +1,8 @@
 var gulp = require('gulp'),
     del = require('del'),
     rename = require('gulp-rename'),
-    minifycss = require('gulp-clean-css'),
-    minifyhtml = require('gulp-htmlmin'),
+    cleancss = require('gulp-clean-css'),
+    htmlmin = require('gulp-htmlmin'),
     processhtml = require('gulp-processhtml'),
     jshint = require('gulp-jshint'),
     streamify = require('gulp-streamify'),
@@ -95,10 +95,10 @@ gulp.task('compile', ['clean'], function(cb) {
     ], cb);
 });
 
-gulp.task('minifycss', ['clean'], function(cb) {
+gulp.task('cleancss', ['clean'], function(cb) {
     pump([
         gulp.src(paths.css),
-        gulpif(!watching, minifycss({
+        gulpif(!watching, cleancss({
             keepSpecialComments: false,
             removeEmpty: true
         })),
@@ -115,10 +115,10 @@ gulp.task('processhtml', ['clean'], function(cb) {
     ], cb);
 });
 
-gulp.task('minifyhtml', ['processhtml'], function(cb) {
+gulp.task('htmlmin', ['processhtml'], function(cb) {
     pump([
         gulp.src('dist/index.html'),
-        gulpif(!watching, minifyhtml()),
+        gulpif(!watching, htmlmin()),
         gulp.dest('./dist/')
     ], cb);
 
@@ -145,4 +145,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['connect', 'watch', 'build']);
-gulp.task('build', ['clean', 'copy', 'compile', 'minifycss', 'processhtml', 'minifyhtml']);
+gulp.task('build', ['clean', 'copy', 'compile', 'cleancss', 'processhtml', 'htmlmin']);
