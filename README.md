@@ -51,21 +51,20 @@ The result in  `dist/`
 通过npm管理插件，devDependencies  里面的插件只用于开发环境，不用于生产环境，而 dependencies  是需要发布到生产环境的。
 
 ### devDependencies:
-*Note:  `npm install <packages>`*
+*Note:  `npm install <packages> --save-dev`*
 
 - [browserify](https://github.com/substack/node-browserify)  for bundling up all of your dependencies.
 - [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml' task
 - [jshint](http://jshint.com/)  for Static Code Analysis Tool
 
 ### dependencies:
-*Note:  `npm install <packages> --save-dev`*
+*Note:  `npm install <packages>`*
 
 - [phaser-official](https://phaser.io/)  for HTML5 games and 2d canvas
 - [howler.js](https://howlerjs.com/)  for audio 
 - [jquery](https://jquery.com/)  for ajax 
 - [Gsap](https://greensock.com/gsap) for javascript animation
 - [animate.css](https://daneden.github.io/animate.css/)  for CSS animation style 
-- [AlloyImage](https://github.com/AlloyTeam/AlloyImage)  for image processing lib
 
 
 ### others:
@@ -75,6 +74,7 @@ The result in  `dist/`
 - [Swiper](http://idangero.us/swiper/) for slider
 - [Chart.js](http://www.chartjs.org/) for chart
 - [tracking.js](https://github.com/eduardolundgren/tracking.js)  for tracking  face etc.
+- [AlloyImage](https://github.com/AlloyTeam/AlloyImage)  for image processing lib
 
 
 ## 文档目录结构
