@@ -31,11 +31,10 @@
     "jquery": "latest",
     "gsap": "latest",
     "phaser": "latest",
-    "animate.css":"latest",
-    
+    "animate.css": "latest"
   },
   "scripts": {
-    "post-install": "node ./node_modules/bower/bin/bower install",
+    // "post-install": "node ./node_modules/bower/bin/bower install",
     "start": "node ./node_modules/gulp/bin/gulp.js",
     "build": "node ./node_modules/gulp/bin/gulp.js build"
   }
