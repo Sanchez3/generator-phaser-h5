@@ -22,13 +22,7 @@ paths = {
     assets: ['src/assets/**/*','!src/assets/css/*','!src/assets/js/*','!src/assets/js/**/*.js'],
     css: ['src/assets/css/*.css'],
     libs: [
-        './src/bower_components/Swiper/dist/js/swiper.jquery.min.js',
-        './src/bower_components/phaser-official/build/custom/phaser-no-physics.min.js',
-        './src/bower_components/howler.js/howler.min.js',
-        './src/bower_components/jquery/dist/jquery.min.js',
-        './src/bower_components/gsap/src/minified/TweenMax.min.js',
-        './src/bower_components/gsap/src/minified/jquery.gsap.min.js',
-        './src/bower_components/progressbar.js/dist/progressbar.min.js',
+        'node_modules/Swiper/dist/js/swiper.jquery.min.js'
         // './src/bower_components/distpicker/dist/distpicker.min.js',
     ],
     js: ['src/assets/js/*.js', 'src/assets/js/**/*.js'],
