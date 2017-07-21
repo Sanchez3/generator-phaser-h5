@@ -1,5 +1,5 @@
 # 前端h5项目目录快速生成器
-**h5 ≠ `<h5></h5>` ,  h5 ≠ html5,  h5 ≠ car haval5. **
+**h5 ≠ `<h5></h5>` ,  h5 ≠ html5,  h5 ≠ car haval5.**
 
 **h5 = Web page or Web app etc.**
 
