@@ -50,11 +50,13 @@ The result in  `dist/`
 
 通过npm管理插件，devDependencies  里面的插件只用于开发环境，不用于生产环境，而 dependencies  是需要发布到生产环境的。
 
+
+
 ### devDependencies:
 *Note:  `npm install <packages> --save-dev`*
 
 - [browserify](https://github.com/substack/node-browserify)  for bundling up all of your dependencies.
-- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml' task
+- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'compile', 'minifycss', 'processhtml', 'minifyhtml' task
 - [jshint](http://jshint.com/)  for Static Code Analysis Tool
 
 ### dependencies:
@@ -76,6 +78,12 @@ The result in  `dist/`
 - [tracking.js](https://github.com/eduardolundgren/tracking.js)  for tracking  face etc.
 - [AlloyImage](https://github.com/AlloyTeam/AlloyImage)  for image processing lib
 
+
+**Note:** Use the following ways Sometime:
+
+*[browserify](https://github.com/substack/node-browserify#brequirefile-opts)  Make `file` available from outside the bundle with `require(file)`.*
+
+*[browserify-shim](https://github.com/thlorenz/browserify-shim) Make CommonJS-Incompatible Files Browserifyable*
 
 ## 文档目录结构
 
@@ -123,6 +131,8 @@ The result in  `dist/`
 [generator-phaser-plus](https://github.com/rblopes/generator-phaser-plus)
 
 [开发自己的 yeoman 脚手架（generator-reactpackage）](https://juejin.im/entry/57c938510e3dd90063e3c725)
+
+[前端模块及依赖管理的新选择：Browserify](http://acgtofe.com/posts/2015/06/modular-javascript-with-browserify)
 
 ## License
 
