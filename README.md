@@ -11,6 +11,8 @@
 
 >Note:...psst! While Bower is maintained, we recommend yarn and webpack for new front-end projects!
 
+
+
 ## 安装/Usage
 >Note:  Install [Node.js](https://nodejs.org/en/), [Gulp](http://gulpjs.com/), ~~[Bower](https://bower.io/)~~ First
 
@@ -43,6 +45,8 @@
 
 
 The result in  `dist/`
+
+
 
 ## 常用插件
 
@@ -85,6 +89,8 @@ The result in  `dist/`
 
 *[browserify-shim](https://github.com/thlorenz/browserify-shim) Make CommonJS-Incompatible Files Browserifyable*
 
+
+
 ## 文档目录结构
 
 ```sh
@@ -123,6 +129,8 @@ The result in  `dist/`
     │
     └── index.html
 ```
+
+
 
 ## 参考资料
 
