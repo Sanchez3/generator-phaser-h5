@@ -85,9 +85,8 @@ The result in  `dist/`
 
 **Note:** Use the following ways Sometime:
 
-*[browserify](https://github.com/substack/node-browserify#brequirefile-opts)  Make `file` available from outside the bundle with `require(file)`.*
-
-*[browserify-shim](https://github.com/thlorenz/browserify-shim) Make CommonJS-Incompatible Files Browserifyable*
+- [browserify](https://github.com/substack/node-browserify#brequirefile-opts)  Make `file` available from outside the bundle with `require(file)`
+- [browserify-shim](https://github.com/thlorenz/browserify-shim) Make CommonJS-Incompatible Files Browserifyable
 
 
 
