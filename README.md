@@ -1,6 +1,5 @@
 # 前端h5项目目录快速生成器
 <div align="left">
-    <img src="docs/media/logo.png" alt="generator-phaser-plus">
     <div>
         <a href="https://www.npmjs.com/package/generator-phaser-h5">
             <img
