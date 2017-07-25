@@ -8,8 +8,8 @@
         </a>
         <a href="https://david-dm.org/Sanchez3/generator-phaser-h5">
             <img
-                alt="dependencies"
-                src="https://david-dm.org/Sanchez3/generator-phaser-h5" title="dependencies status"><img src="https://david-dm.org/Sanchez3/generator-phaser-h5/status.svg">
+                alt="dependencies status"
+                src="https://david-dm.org/Sanchez3/generator-phaser-h5/status.svg">
         </a>
         <a href="https://travis-ci.org/Sanchez3/generator-phaser-h5">
             <img
