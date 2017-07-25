@@ -16,6 +16,12 @@
                 alt="Travis CI Build Status"
                 src="https://travis-ci.org/Sanchez3/generator-phaser-h5.svg?branch=master">
         </a>
+        <a href="https://www.npmjs.com/package/generator-phaser-h5">
+             <img
+             alt="Downloads"
+             src="https://img.shields.io/npm/dm/generator-phaser-h5.svg?style=flat-square">
+        </a>
+       
     </div>
 </div>
 
