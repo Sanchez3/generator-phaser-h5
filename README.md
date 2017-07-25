@@ -159,6 +159,18 @@ The result in  `dist/`
 
 ## Versions
 
+### 1.x.x
+
+Only for Phaser 
+
+### 2.x.x
+
+Not only for Phaser , Add Dependencies you want
+
+### 3.x.x
+
+Rebuild Directory Structure
+
 
 ## 参考资料
 
