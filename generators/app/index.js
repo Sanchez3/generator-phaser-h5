@@ -32,10 +32,10 @@ module.exports = class extends Generator {
                 choices: ['MIT', 'ISC', 'Apache-2.0', 'AGPL-3.0']
             }
         ]).then(answers => {
-      this.projectName = answers.projectName ? answers.projectName : ' ';
-      this.projectDesc = answers.projectDesc ? answers.projectDesc : ' ';
-      this.projectLicense = answers.projectLicense||'MIT';
-    });
+            this.projectName = answers.projectName ? answers.projectName : ' ';
+            this.projectDesc = answers.projectDesc ? answers.projectDesc : ' ';
+            this.projectLicense = answers.projectLicense || 'MIT';
+        });
     }
     configuring() {
         this.config.set('projectName', this.projectName);
@@ -71,9 +71,7 @@ module.exports = class extends Generator {
 
     }
     install() { //安装依赖
-        if (this.options.skipInstall === true) {
-            this.installDependencies({ bower: false });
-        }
+        this.installDependencies({ bower: false });
     }
     end() {
         this.log(yosay(
