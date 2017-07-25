@@ -1,4 +1,26 @@
 # 前端h5项目目录快速生成器
+<div align="left">
+    <img src="docs/media/logo.png" alt="generator-phaser-plus">
+    <div>
+        <a href="https://www.npmjs.com/package/generator-phaser-h5">
+            <img
+                alt="npm version"
+                src="https://img.shields.io/npm/v/generator-phaser-h5.svg?style=flat-square">
+        </a>
+        <a href="https://david-dm.org/Sanchez3/generator-phaser-h5">
+            <img
+                alt="dependencies"
+                src="https://david-dm.org/Sanchez3/generator-phaser-h5" title="dependencies status"><img src="https://david-dm.org/Sanchez3/generator-phaser-h5/status.svg">
+        </a>
+        <a href="https://travis-ci.org/Sanchez3/generator-phaser-h5">
+            <img
+                alt="Travis CI Build Status"
+                src="https://travis-ci.org/Sanchez3/generator-phaser-h5.svg?branch=master">
+        </a>
+    </div>
+</div>
+
+
 **h5 ≠ `<h5></h5>` ,  h5 ≠ html5,  h5 ≠ car haval5.**
 
 **h5 = Web page or Web app etc.**
@@ -13,7 +35,7 @@
 
 
 
-## 安装/Usage
+## 安装/Installation
 >Note:  Install [Node.js](https://nodejs.org/en/), [Gulp](http://gulpjs.com/), ~~[Bower](https://bower.io/)~~ First
 
 1. **Get  [Yeoman](http://yeoman.io/) and`generator-phaser-h5` via [npm](https://www.npmjs.com/).**
@@ -130,13 +152,16 @@ The result in  `dist/`
     └── index.html
 ```
 
+## Versions
 
 
 ## 参考资料
 
-[Generator API](http://yeoman.github.io/generator/)
+[Yeoman Generator API](http://yeoman.github.io/generator/)
 
 [generator-phaser-plus](https://github.com/rblopes/generator-phaser-plus)
+
+[创建 Yeoman Generator 简单教程](http://www.jianshu.com/p/9f3e6bcdb274)
 
 [开发自己的 yeoman 脚手架（generator-reactpackage）](https://juejin.im/entry/57c938510e3dd90063e3c725)
 
