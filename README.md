@@ -93,6 +93,7 @@ The result in  `dist/`
 ## 文档目录结构
 
 ```sh
+    .
     ├── src
     │   ├── assets
     │   │   ├── img

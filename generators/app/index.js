@@ -1,36 +1,83 @@
-var path = require('path');
-var chalk = require('chalk'); //不同颜色的info
-var util = require('util');
-var yeoman = require('yeoman-generator');
-var yosay = require('yosay'); //yeoman弹出框
-var path = require('path');
+const path = require('path');
+const chalk = require('chalk');
+const util = require('util');
+const Generator = require('yeoman-generator');
+const yosay = require('yosay');
+const mkdirp = require('mkdirp');
+const foldername = path.basename(process.cwd());
 
-var H5package = yeoman.Base.extend({
-    info: function() {
-        this.log(chalk.green(
-            'Start Build'
-        ));
-    },
-    generateBasic: function() { //按照自己的templates目录自定义
-        this.directory('src', 'src'); //拷贝目录
-        this.copy('package.json', 'package.json'); //拷贝文件
-        this.copy('.jshintrc', '.jshintrc');
-        // this.copy('README.md', 'README.md');
-        this.copy('gulpfile.js', 'gulpfile.js');
-    },
-    generateClient: function() {
-        this.sourceRoot(path.join(__dirname, 'templates'));
-        this.destinationPath('./');
-    },
-    install: function() { //安装依赖
-        this.installDependencies({
-            skipInstall: this.options['skip-install']
-        });
-    },
-    end: function() {
+module.exports = class extends Generator {
+    initializing() {
+        this.props = {};
+    }
+    prompting() {
         this.log(yosay(
-            'Your app has been created successfully!'
+            '~' + chalk.red('generator-phaser-h5') + '~'
+        ));
+        return this.prompt([{
+                type: 'input',
+                name: 'projectName',
+                message: 'What\'s the name of your application',
+                default: foldername
+            },
+            {
+                type: 'input',
+                name: 'projectDesc',
+                message: 'What\'s the description of your application:'
+            },
+            {
+                type: 'list',
+                name: 'projectLicense',
+                message: 'Please choose license:',
+                choices: ['MIT', 'ISC', 'Apache-2.0', 'AGPL-3.0']
+            }
+        ]).then(answers => {
+      this.projectName = answers.projectName ? answers.projectName : ' ';
+      this.projectDesc = answers.projectDesc ? answers.projectDesc : ' ';
+      this.projectLicense = answers.projectLicense||'MIT';
+    });
+    }
+    configuring() {
+        this.config.set('projectName', this.projectName);
+        this.config.set('projectDesc', this.projectDesc);
+        this.config.set('projectLicense', this.projectLicense);
+    }
+    writing() {
+        this.log(yosay(
+            '~' + chalk.red('generator-phaser-h5') + '~'
+        ));
+        this.fs.copyTpl(
+            this.templatePath('src'),
+            this.destinationPath('src'),
+            this
+        );
+        mkdirp('src/assets/img');
+        this.fs.copyTpl(
+            this.templatePath('_package.json'),
+            this.destinationPath('package.json'),
+            this
+        );
+
+        this.fs.copy(
+            this.templatePath('jshintrc'),
+            this.destinationPath('.jshintrc'),
+            this
+        );
+        this.fs.copy(
+            this.templatePath('_gulpfile.js'),
+            this.destinationPath('gulpfile.js'),
+            this
+        );
+
+    }
+    install() { //安装依赖
+        if (this.options.skipInstall === true) {
+            this.installDependencies({ bower: false });
+        }
+    }
+    end() {
+        this.log(yosay(
+            'Your h5 has been created successfully!'
         ));
     }
-});
-module.exports = H5package;
+};
