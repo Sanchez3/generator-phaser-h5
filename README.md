@@ -65,7 +65,7 @@ The result in  `dist/`
 *Note:  `npm install <packages> --save-dev`*
 
 - [browserify](https://github.com/substack/node-browserify)  for bundling up all of your dependencies.
-- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'compile', 'minifycss', 'processhtml', 'minifyhtml' ,ç task
+- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'compile', 'minifycss', 'processhtml', 'minifyhtml' , etc. 
 - [jshint](http://jshint.com/)  for Static Code Analysis Tool
 
 ### dependencies:
