@@ -3,6 +3,7 @@
 <div align="left"><div><a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="npm version"
  src="https://img.shields.io/npm/v/generator-phaser-h5.svg?style=flat-square"></a><a href="https://david-dm.org/Sanchez3/generator-phaser-h5"><img alt="dependencies status" src="https://david-dm.org/Sanchez3/generator-phaser-h5/status.svg"></a><a href="https://travis-ci.org/Sanchez3/generator-phaser-h5"><img alt="Travis CI Build Status" src="https://travis-ci.org/Sanchez3/generator-phaser-h5.svg?branch=master"></a><a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="Downloads" src="https://img.shields.io/npm/dm/generator-phaser-h5.svg?style=flat-square"></a></div></div>
 
+
 **h5 ≠ `<h5></h5>` ,  h5 ≠ html5,  h5 ≠ car haval5.**
 
 **h5 = Web page or Web app etc.**
@@ -44,7 +45,7 @@
 
     ```sh
     gulp          #'connect', 'watch', 'build'
-    gulp build    #'clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml'
+    gulp build    #'clean', 'copy', 'compile', 'minifycss', 'processhtml', 'minifyhtml'
     ```
 
 
@@ -64,7 +65,7 @@ The result in  `dist/`
 *Note:  `npm install <packages> --save-dev`*
 
 - [browserify](https://github.com/substack/node-browserify)  for bundling up all of your dependencies.
-- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'compile', 'minifycss', 'processhtml', 'minifyhtml' task
+- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'compile', 'minifycss', 'processhtml', 'minifyhtml' ,ç task
 - [jshint](http://jshint.com/)  for Static Code Analysis Tool
 
 ### dependencies:
@@ -78,16 +79,22 @@ The result in  `dist/`
 
 
 ### others:
-*Note: Their Documentation For a Getting started guide, Usage , API docs, etc. check out or docs!*
+*Note: Read Documentation For a Getting started guide, Usage , API docs, etc. check out or docs!*
 
 - [better-picker](https://github.com/ustbhuangyi/picker)  for  address picker 
+
 - [Swiper](http://idangero.us/swiper/) for slider
+
 - [Chart.js](http://www.chartjs.org/) for chart
+
 - [tracking.js](https://github.com/eduardolundgren/tracking.js)  for tracking  face etc.
+
 - [AlloyImage](https://github.com/AlloyTeam/AlloyImage)  for image processing lib
 
+  ​
 
-**Note:** Use the following ways Sometime:
+
+*Use the following ways Sometime:*
 
 - [browserify](https://github.com/substack/node-browserify#brequirefile-opts)  Make `file` available from outside the bundle with `require(file)`
 - [browserify-shim](https://github.com/thlorenz/browserify-shim) Make CommonJS-Incompatible Files Browserifyable
