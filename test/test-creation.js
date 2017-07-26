@@ -15,7 +15,7 @@ describe('yo phaser-h5', () => {
             .inTmpDir(dir => {
                 tmpdir = dir;
             })
-            .withOptions({ projectName: 'temp' })
+            .withOptions({ projectName: 'temp' }, { projectDesc: ' ' }, { projectLicense: 'MIT' })
     });
 
     afterEach(() => fsextra.remove(tmpdir));
@@ -27,7 +27,7 @@ describe('yo phaser-h5', () => {
             'gulpfile.js',
             '.jshintrc',
             'src/assets/css/css.css',
-            'index.html',
+            'src/index.html',
             'package.json',
             'src/assets/js/main.js',
             'src/assets/js/entities/Gesture.js',
