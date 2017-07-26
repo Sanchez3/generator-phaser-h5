@@ -1,7 +1,6 @@
-# 前端h5项目目录快速生成器
+# 前端h5项目快速生成器
 
-<div align="left"><div><a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="npm version"
- src="https://img.shields.io/npm/v/generator-phaser-h5.svg?style=flat-square"></a><a href="https://david-dm.org/Sanchez3/generator-phaser-h5"><img alt="dependencies status" src="https://david-dm.org/Sanchez3/generator-phaser-h5/status.svg"></a><a href="https://travis-ci.org/Sanchez3/generator-phaser-h5"><img alt="Travis CI Build Status" src="https://travis-ci.org/Sanchez3/generator-phaser-h5.svg?branch=master"></a><a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="Downloads" src="https://img.shields.io/npm/dm/generator-phaser-h5.svg?style=flat-square"></a></div></div>
+<div align="left"><div><a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="npm version" src="https://img.shields.io/npm/v/generator-phaser-h5.svg?style=flat-square"></a><a href="https://david-dm.org/Sanchez3/generator-phaser-h5"><img alt="dependencies status" src="https://david-dm.org/Sanchez3/generator-phaser-h5/status.svg"></a><a href="https://travis-ci.org/Sanchez3/generator-phaser-h5"><img alt="Travis CI Build Status" src="https://travis-ci.org/Sanchez3/generator-phaser-h5.svg?branch=master"></a><a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="Downloads" src="https://img.shields.io/npm/dm/generator-phaser-h5.svg?style=flat-square"></a></div></div>
 
 
 **h5 ≠ `<h5></h5>` ,  h5 ≠ html5,  h5 ≠ car haval5.**
@@ -18,30 +17,35 @@
 
 
 
-## 安装/Installation
+## 安装 / Installation
 >Note:  Install [Node.js](https://nodejs.org/en/), [Gulp](http://gulpjs.com/), ~~[Bower](https://bower.io/)~~ First
 
-1. **Get  [Yeoman](http://yeoman.io/) and`generator-phaser-h5` via [npm](https://www.npmjs.com/).**
+- **Get  [Yeoman](http://yeoman.io/) and`generator-phaser-h5` via [npm](https://www.npmjs.com/).**
 
-   ```sh
-       npm install --global yo                    # Install Yeoman if you don't have it yet.
-       npm install --global generator-phaser-h5   # Install generator-phaser-h5
-   ```
+    ```sh
+    npm install --global yo                    # Install Yeoman if you don't have it yet.
+    npm install --global generator-phaser-h5   # Install generator-phaser-h5
+    ```
 
-2. **Create a directory to keep your project contents and go into it.**
+
+
+
+## 使用 / Usage
+
+1. **Create a directory to keep your project contents and go into it.**
 
     ```sh
     mkdir myproject
     cd myproject
     ```
 
-3. **Create your new game project.**
+2. **Create your new game project.**
 
     ```sh
     yo phaser-h5
     ```
 
-4. **Launch it!**
+3. **Launch it!**
 
     ```sh
     gulp          #'connect', 'watch', 'build'
@@ -53,13 +57,11 @@ The result in  `dist/`
 
 
 
-## 常用插件
+## 常用插件 / Plugins
 
 ~~[Bower](https://bower.io/)管理插件~~ 
 
 通过npm管理插件，devDependencies  里面的插件只用于开发环境，不用于生产环境，而 dependencies  是需要发布到生产环境的。
-
-
 
 ### devDependencies:
 *Note:  `npm install <packages> --save-dev`*
@@ -91,18 +93,19 @@ The result in  `dist/`
 
 - [AlloyImage](https://github.com/AlloyTeam/AlloyImage)  for image processing lib
 
-  ​
 
 
-*Use the following ways Sometime:*
+**Use the following ways Sometime:**
 
 - [browserify](https://github.com/substack/node-browserify#brequirefile-opts)  Make `file` available from outside the bundle with `require(file)`
 - [browserify-shim](https://github.com/thlorenz/browserify-shim) Make CommonJS-Incompatible Files Browserifyable
 
 
 
-## 文档目录结构
 
+## 文档目录结构 / Directory Structure
+
+**开发时目录结构 `gulp`**
 ```sh
     .
     ├── src
@@ -126,7 +129,7 @@ The result in  `dist/`
     └── .jshintrc   
 ```
 
-## 打包文档目录 `gulp build`
+**打包后目录结构 `gulp build`**
 
 ```sh
    dist
@@ -141,7 +144,9 @@ The result in  `dist/`
     └── index.html
 ```
 
-## Versions
+
+
+## 版本 / Versions
 
 ### 1.x.x
 
@@ -149,14 +154,15 @@ Only for Phaser
 
 ### 2.x.x
 
-Not only for Phaser , Add Dependencies you want
+Not only for Phaser , Add Dependencies you want , Without Bower
 
 ### 3.x.x
 
 Rebuild Directory Structure
 
 
-## 参考资料
+
+## 参考链接 / Reference
 
 [Yeoman Generator API](http://yeoman.github.io/generator/)
 
@@ -167,6 +173,8 @@ Rebuild Directory Structure
 [开发自己的 yeoman 脚手架（generator-reactpackage）](https://juejin.im/entry/57c938510e3dd90063e3c725)
 
 [前端模块及依赖管理的新选择：Browserify](http://acgtofe.com/posts/2015/06/modular-javascript-with-browserify)
+
+
 
 ## License
 
