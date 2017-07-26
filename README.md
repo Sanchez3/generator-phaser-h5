@@ -1,6 +1,14 @@
 # 前端h5项目快速生成器
 
-<div align="left"><div><a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="npm version" src="https://img.shields.io/npm/v/generator-phaser-h5.svg?style=flat-square"></a><a href="https://david-dm.org/Sanchez3/generator-phaser-h5"><img alt="dependencies status" src="https://david-dm.org/Sanchez3/generator-phaser-h5/status.svg"></a><a href="https://travis-ci.org/Sanchez3/generator-phaser-h5"><img alt="Travis CI Build Status" src="https://travis-ci.org/Sanchez3/generator-phaser-h5.svg?branch=master"></a><a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="Downloads" src="https://img.shields.io/npm/dm/generator-phaser-h5.svg?style=flat-square"></a></div></div>
+<div align="left">
+    <div>
+        <a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="npm version" src="https://img.shields.io/npm/v/generator-phaser-h5.svg?style=flat-square"></a>
+        <a href="https://travis-ci.org/Sanchez3/generator-phaser-h5"><img alt="Travis CI Build Status" src="https://travis-ci.org/Sanchez3/generator-phaser-h5.svg?branch=master"></a>
+        <a href="https://david-dm.org/Sanchez3/generator-phaser-h5"><img alt="dependencies status" src="https://david-dm.org/Sanchez3/generator-phaser-h5/status.svg"></a>
+        <a href="https://david-dm.org/Sanchez3/generator-phaser-h5?type=dev"><img alt="devDependencies status" src="https://david-dm.org/Sanchez3/generator-phaser-h5/dev-status.svg"/></a>
+        <a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="Downloads" src="https://img.shields.io/npm/dm/generator-phaser-h5.svg?style=flat-square"></a>
+    </div>
+</div>
 
 
 **h5 ≠ `<h5></h5>` ,  h5 ≠ html5,  h5 ≠ car haval5.**
