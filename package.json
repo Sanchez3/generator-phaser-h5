@@ -1,11 +1,8 @@
 {
   "name": "generator-phaser-h5",
-  "version": "3.4.16",
+  "version": "3.4.17",
   "description": "A Yeoman generator to generate h5 games with phaser.js or not",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
   "keywords": [
     "yeoman-generator",
     "phaser",
@@ -29,6 +26,5 @@
     "minimatch": "^3.0.4",
     "yeoman-generator": "^1.1.1",
     "yosay": "^2.0.0",
-    "mocha": "*"
   }
 }
