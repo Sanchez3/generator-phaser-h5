@@ -4,5 +4,3 @@ node_js:
   - v8
   - v6
   - v4
-after_success:
-  - 'cat ./coverage/lcov.info | ./node_modules/.bin/coveralls'
