@@ -4,8 +4,5 @@ node_js:
   - v8
   - v6
   - v4
-install:
-  - npm install -g codecov
-script:
-  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
-  - codecov
+after_script:
+  - cat ./coverage/lcov.info | coveralls
