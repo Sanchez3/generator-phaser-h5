@@ -73,9 +73,4 @@ module.exports = class extends Generator {
     install() { //安装依赖
         this.installDependencies({ bower: false });
     }
-    end() {
-        this.log(yosay(
-            'Your h5 has been created successfully!'
-        ));
-    }
 };

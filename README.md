@@ -20,7 +20,7 @@
 ## 安装 / Installation
 >Note:  Install [Node.js](https://nodejs.org/en/), [Gulp](http://gulpjs.com/), ~~[Bower](https://bower.io/)~~ First
 
-- **Get  [Yeoman](http://yeoman.io/) and`generator-phaser-h5` via [npm](https://www.npmjs.com/).**
+- **Get  [Yeoman](http://yeoman.io/) and `generator-phaser-h5` via [npm](https://www.npmjs.com/).**
 
     ```sh
     npm install --global yo                    # Install Yeoman if you don't have it yet.
@@ -76,7 +76,7 @@ The result in  `dist/`
 - [phaser-official](https://phaser.io/)  for HTML5 games and 2d canvas
 - [howler.js](https://howlerjs.com/)  for audio 
 - [jquery](https://jquery.com/)  for ajax 
-- [Gsap](https://greensock.com/gsap) for javascript animation
+- [Gsap](https://greensock.com/gsap)  for javascript animation
 - [animate.css](https://daneden.github.io/animate.css/)  for CSS animation style 
 
 
@@ -85,9 +85,9 @@ The result in  `dist/`
 
 - [better-picker](https://github.com/ustbhuangyi/picker)  for  address picker 
 
-- [Swiper](http://idangero.us/swiper/) for slider
+- [Swiper](http://idangero.us/swiper/)  for slider
 
-- [Chart.js](http://www.chartjs.org/) for chart
+- [Chart.js](http://www.chartjs.org/)  for chart
 
 - [tracking.js](https://github.com/eduardolundgren/tracking.js)  for tracking  face etc.
 
@@ -98,7 +98,7 @@ The result in  `dist/`
 **Use the following ways Sometime:**
 
 - [browserify](https://github.com/substack/node-browserify#brequirefile-opts)  Make `file` available from outside the bundle with `require(file)`
-- [browserify-shim](https://github.com/thlorenz/browserify-shim) Make CommonJS-Incompatible Files Browserifyable
+- [browserify-shim](https://github.com/thlorenz/browserify-shim)  Make CommonJS-Incompatible Files Browserifyable
 
 
 
