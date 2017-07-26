@@ -26,7 +26,7 @@
     "yosay": "^2.0.0"
   },
   "devDependencies": {
-    "coveralls": "^2.11.15",
+    "coveralls": "^2.13.1",
     "fs-extra": "^4.0.0",
     "mocha": "^3.4.2",
     "yeoman-assert": "^3.0.0",
