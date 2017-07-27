@@ -2,11 +2,11 @@
 
 <div align="left">
     <div>
-        <a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="npm version" src="https://img.shields.io/npm/v/generator-phaser-h5.svg?style=flat-square"></a>
+        <a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="npm version" src="https://img.shields.io/npm/v/generator-phaser-h5.svg"></a>
         <a href="https://travis-ci.org/Sanchez3/generator-phaser-h5"><img alt="Travis CI Build Status" src="https://travis-ci.org/Sanchez3/generator-phaser-h5.svg?branch=master"></a>
         <a href="https://david-dm.org/Sanchez3/generator-phaser-h5"><img alt="dependencies status" src="https://david-dm.org/Sanchez3/generator-phaser-h5/status.svg"></a>
         <a href="https://david-dm.org/Sanchez3/generator-phaser-h5?type=dev"><img alt="devDependencies status" src="https://david-dm.org/Sanchez3/generator-phaser-h5/dev-status.svg"/></a>
-        <a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="Downloads" src="https://img.shields.io/npm/dm/generator-phaser-h5.svg?style=flat-square"></a>
+        <a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="Downloads" src="https://img.shields.io/npm/dm/generator-phaser-h5.svg"></a>
     </div>
 </div>
 
@@ -57,7 +57,7 @@
 
     ```sh
     gulp          #'connect', 'watch', 'build'
-    gulp build    #'clean', 'copy', 'compile', 'minifycss', 'processhtml', 'minifyhtml'
+    gulp build    #'clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml'
     ```
 
 
@@ -75,7 +75,7 @@ The result in  `dist/`
 *Note:  `npm install <packages> --save-dev`*
 
 - [browserify](https://github.com/substack/node-browserify)  for bundling up all of your dependencies.
-- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'compile', 'minifycss', 'processhtml', 'minifyhtml' , etc. 
+- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml' , etc. 
 - [jshint](http://jshint.com/)  for Static Code Analysis Tool
 
 ### dependencies:
@@ -105,8 +105,17 @@ The result in  `dist/`
 
 **Use the following ways Sometime:**
 
+- Cdn  [jsDelivr](http://www.jsdelivr.com/), [cdnjs](https://cdnjs.com/), [bootcdn](http://www.bootcdn.cn/):  
+
+  e.g.  `<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.2/phaser.js"></script>`
+
 - [browserify](https://github.com/substack/node-browserify#brequirefile-opts)  Make `file` available from outside the bundle with `require(file)`
+
 - [browserify-shim](https://github.com/thlorenz/browserify-shim)  Make CommonJS-Incompatible Files Browserifyable
+
+- Local  Use gulp `copylibs` task
+
+  e.g. `<script src="/assets/js/lib/phaser-minimum.min.js"></script>` 
 
 
 
@@ -116,10 +125,11 @@ The result in  `dist/`
 **开发时目录结构 `gulp`**
 ```sh
     .
+    ├── dist
     ├── src
     │   ├── assets
     │   │   ├── img
-    │   │   ├── video
+    │   │   ├── media         #video audio
     │   │   ├── css
     │   │   │   └── css.css
     │   │   └── js
@@ -143,10 +153,12 @@ The result in  `dist/`
    dist
     ├── assets
     │   ├── img
-    │   ├── video
+    │   ├── media
     │   ├── css
     │   │   └── css.min.css
     │   └── js
+    │		├── lib
+    │		│	└── *.js
     │       └── main.min.js
     │
     └── index.html

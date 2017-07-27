@@ -19,11 +19,11 @@ var gulp = require('gulp'),
 var watching = false;
 
 paths = {
-    assets: ['src/assets/**/*','!src/assets/css/*','!src/assets/js/*','!src/assets/js/**/*.js'],
+    assets: ['src/assets/**/*', '!src/assets/css/*', '!src/assets/js/*', '!src/assets/js/**/*.js'],
     css: ['src/assets/css/*.css'],
     libs: [
-        'node_modules/Swiper/dist/js/swiper.jquery.min.js'
-        // './src/bower_components/distpicker/dist/distpicker.min.js',
+        'node_modules/Swiper/dist/js/swiper.jquery.min.js',
+        'node_modules/phaser/build/custom/phaser-minimum.min.js'
     ],
     js: ['src/assets/js/*.js', 'src/assets/js/**/*.js'],
     entry: './src/assets/js/main.js',
@@ -46,13 +46,13 @@ gulp.task('copy', ['clean'], function(cb) {
 });
 
 
-// gulp.task('copylibs', ['clean'], function(cb) {
+gulp.task('copylibs', ['clean'], function(cb) {
 
-//     pump([gulp.src(paths.libs),
-//         gulpif(!watching, uglify()),
-//         gulp.dest(paths.dist + 'js/lib')
-//     ], cb);
-// });
+    pump([gulp.src(paths.libs),
+        gulpif(!watching, uglify()),
+        gulp.dest(paths.dist + 'js/lib')
+    ], cb);
+});
 
 gulp.task('compile', ['clean'], function(cb) {
     // var bundler = browserify({
@@ -126,7 +126,7 @@ gulp.task('html', ['build'], function(cb) {
 });
 
 gulp.task('connect', function() {
-     connect.server({
+    connect.server({
         root: ['./dist'],
         port: 9000,
         livereload: true
@@ -139,4 +139,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['connect', 'watch', 'build']);
-gulp.task('build', ['clean', 'copy', 'compile', 'cleancss', 'processhtml', 'htmlmin']);
+gulp.task('build', ['clean', 'copy', 'copylibs', 'compile', 'cleancss', 'processhtml', 'htmlmin']);

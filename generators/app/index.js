@@ -52,6 +52,7 @@ module.exports = class extends Generator {
             this
         );
         mkdirp('src/assets/img');
+        mkdirp('src/assets/media');
         this.fs.copyTpl(
             this.templatePath('_package.json'),
             this.destinationPath('package.json'),
