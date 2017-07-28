@@ -105,17 +105,21 @@ The result in  `dist/`
 
 **Use the following ways Sometime:**
 
-- Cdn  [jsDelivr](http://www.jsdelivr.com/), [cdnjs](https://cdnjs.com/), [bootcdn](http://www.bootcdn.cn/):  
-
-  e.g.  `<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.2/phaser.js"></script>`
+- Cdn  [jsDelivr](http://www.jsdelivr.com/), [cdnjs](https://cdnjs.com/), [bootcdn](http://www.bootcdn.cn/) :  
+  ```html
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.2/phaser.js"></script>
+  ```
 
 - [browserify](https://github.com/substack/node-browserify#brequirefile-opts)  Make `file` available from outside the bundle with `require(file)`
 
 - [browserify-shim](https://github.com/thlorenz/browserify-shim)  Make CommonJS-Incompatible Files Browserifyable
 
-- Local  Use gulp `copylibs` task
+- Local  Use gulp `copylibs` task :
+  ```html
+  <script src="/assets/js/lib/phaser-minimum.min.js"></script>
+  ```
 
-  e.g. `<script src="/assets/js/lib/phaser-minimum.min.js"></script>` 
+  ​
 
 
 
