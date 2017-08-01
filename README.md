@@ -93,14 +93,11 @@ The result in  `dist/`
 *Note: Read Documentation For a Getting started guide, Usage , API docs, etc. check out or docs!*
 
 - [better-picker](https://github.com/ustbhuangyi/picker)  for  address picker 
-
 - [Swiper](http://idangero.us/swiper/)  for slider
-
 - [Chart.js](http://www.chartjs.org/)  for chart
-
 - [tracking.js](https://github.com/eduardolundgren/tracking.js)  for tracking  face etc.
-
 - [AlloyImage](https://github.com/AlloyTeam/AlloyImage)  for image processing lib
+- [Stats](https://github.com/mrdoob/stats.js)  for JavaScript Performance Monitor 
 
 
 

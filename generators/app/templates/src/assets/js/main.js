@@ -2,7 +2,7 @@
  * Created by sanchez 
  */
 'use strict';
-window.game = new Phaser.Game(1334, 636, Phaser.CANVAS, 'mycanvas', null, true);
+window.game = new Phaser.Game(750, 1334, Phaser.CANVAS, 'mycanvas', null, true);
 window.game.state.add('Boot', require('./states/boot'));
 window.game.state.add('Preloader', require('./states/preloader'));
 window.game.state.add('State1', require('./states/state1'));
@@ -130,3 +130,25 @@ window.h5 = {
     }
 };
 window.h5.cssInit().eventInit();
+
+
+function showStats() {
+    var stats = new Stats();
+    stats.showPanel(1); // 0: fps, 1: ms, 2: mb, 3+: custom
+    var fs = document.createElement('div');
+    fs.style.position = 'absolute';
+    fs.style.left = 0;
+    fs.style.top = 0;
+    fs.style.zIndex = 999;
+    fs.appendChild(stats.domElement);
+    document.body.appendChild(fs);
+
+    function animate() {
+        stats.begin();
+        // monitored code goes here
+        stats.end();
+        requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+}
+showStats();
