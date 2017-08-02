@@ -43,9 +43,6 @@ module.exports = class extends Generator {
         this.config.set('projectLicense', this.projectLicense);
     }
     writing() {
-        this.log(yosay(
-            '~' + chalk.red('generator-phaser-h5') + '~'
-        ));
         this.fs.copyTpl(
             this.templatePath('src'),
             this.destinationPath('src'),
