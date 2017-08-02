@@ -23,7 +23,7 @@ paths = {
     css: ['src/assets/css/*.css'],
     libs: [
         'node_modules/Swiper/dist/js/swiper.jquery.min.js',
-        'node_modules/phaser/build/custom/phaser-minimum.min.js'
+        'node_modules/phaser/build/phaser.min.js'
     ],
     js: ['src/assets/js/*.js', 'src/assets/js/**/*.js'],
     entry: './src/assets/js/main.js',
