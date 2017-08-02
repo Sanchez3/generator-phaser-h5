@@ -57,8 +57,8 @@ ECMAScript version ES5
 3. **Launch it!**
 
     ```sh
-    gulp          #'connect', 'watch', 'build'
-    gulp build    #'clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml'
+    gulp          #Launches the server and opens the page for live development.
+    gulp build    #Prepare the h5 release for distribution.
     ```
 
 
