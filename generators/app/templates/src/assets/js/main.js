@@ -89,7 +89,8 @@ window.h5 = {
         //         //_.closeShuping();
         //     }
         // }, false);
-
+        var noChangeCountToEnd = 100,
+            noEndTimeout = 1000;
         that.rootResize2();
         window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
             var interval,
@@ -107,7 +108,6 @@ window.h5 = {
                 that.rootResize1();
             };
             interval = setInterval(function() {
-                console.log(window);
                 if (window.innerWidth === lastInnerWidth && window.innerHeight === lastInnerHeight) {
                     noChangeCount++;
                     if (noChangeCount === noChangeCountToEnd) {
