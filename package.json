@@ -1,6 +1,6 @@
 {
   "name": "generator-phaser-h5",
-  "version": "3.5.13",
+  "version": "3.5.14",
   "description": "A Yeoman generator to generate h5 games with phaser.js or not",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,10 @@
   "keywords": [
     "yeoman-generator",
     "phaser",
-    "es2015"
+    "es2015",
+    "gulp",
+    "html5",
+    "browserify"
   ],
   "repository": {
     "type": "git",
