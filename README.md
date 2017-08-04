@@ -159,8 +159,8 @@ The result in  `dist/`
     │   ├── css
     │   │   └── css.min.css
     │   └── js
-    │		├── lib
-    │		│	└── *.js
+    │       ├── lib
+    │       │    └── *.js
     │       └── main.min.js
     │
     └── index.html
