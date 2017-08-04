@@ -2,7 +2,7 @@
  * Created by sanchez 
  */
 'use strict';
-window.game = new Phaser.Game(750, 1334, Phaser.CANVAS, 'mycanvas', null, true);
+window.game = new Phaser.Game('100', '100', Phaser.CANVAS, 'mycanvas', null, true);
 window.game.state.add('Boot', require('./states/boot'));
 window.game.state.add('Preloader', require('./states/preloader'));
 window.game.state.add('State1', require('./states/state1'));
