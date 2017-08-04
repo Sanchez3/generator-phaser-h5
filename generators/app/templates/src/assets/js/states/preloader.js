@@ -3,8 +3,7 @@
  */
 (function() {
     'use strict';
-    var Preloader = function() {
-    };
+    var Preloader = function() {};
 
     module.exports = Preloader;
 
@@ -256,7 +255,7 @@
         },
         create: function() {
             var that = this;
-
+            that.pgGraphics = this.add.graphics(0, 0);
             this.load.onFileComplete.add(that.onfileComplete, this);
             this.load.onLoadComplete.addOnce(that.onLoadComplete, this);
             this.loadResources();
