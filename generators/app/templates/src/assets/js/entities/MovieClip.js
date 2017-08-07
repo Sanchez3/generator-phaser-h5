@@ -5,15 +5,13 @@
 'use strict';
 
 
-/*
- 视频序列帧播放类         
- @startIndex 开始图片文件序列
- @endIndex 结束图片文件序列      
- @x y width height 视频的位置及宽高
- @frameWidth,frameHeight  序列帧纹理宽高     
- @totalFrames 视频序列帧总帧数
- @frameRate  帧速率 每秒帧数
- @onComplete 播放结束回调
+/**
+ * @class MovieClip 视频序列帧播放类  
+ * @constructor
+ * @param {Phaser.Game} game
+ * @param {number} x y width height 视频的位置及宽高
+ * @param {VideoConfig} videoConfig  视频序列帧配置类
+ * @param {function} onComplete 播放结束回调
  */
 
 

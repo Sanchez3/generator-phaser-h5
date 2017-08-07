@@ -4,20 +4,20 @@
 
 'use strict';
 
-/*
-
- 视频序列帧配置类
- @filepath 路径
- @prefix 前缀
- @postfix 后缀
- @start 序列帧素材开始索引
- @end  序列帧素材结束索引
- @frameWidth 帧宽度
- @frameHeight 帧高度
- @frames 每张图片所包含的总帧数
- @totalFrame 视频总帧数
- @frameRate 帧速率 每秒多少帧
-
+/**
+ * @class VideoConfig 视频序列帧配置类
+ * @constructor
+ * @param {Phaser.Game} game
+ * @param {String} filepath 路径
+ * @param {String} prefix 前缀
+ * @param {String} postfix 后缀
+ * @param {number} start 序列帧素材开始索引
+ * @param {number} end 序列帧素材结束索引
+ * @param {number} frameWidth 帧宽度
+ * @param {number} frameHeight 帧高度
+ * @param {number} frames 每张图片所包含的总帧数
+ * @param {number} totalFrames 视频序列帧总帧数
+ * @param {number} frameRate 帧率 每秒多少帧
  */
 
 
@@ -49,19 +49,19 @@ VideoConfig.prototype = {
         }
     },
     getStartIndex: function() {
-            return this.start;
-        }
-        // removeload:function () {
-        //     for (var i = this.start; i <= this.end; i++) {
-        //         var nFrame = this.frames;
-        //         if (i == this.end) { //最后一张图片计算剩余帧数
-        //             nFrame = this.totalFrame % this.frames;
-        //
-        //         }
-        //         this.game.load.spritesheet(this.prefix + i, this.filepath + this.prefix + i + this.postfix, this.frameWidth, this.frameHeight, nFrame);
-        //     }
-        //
-        // }
+        return this.start;
+    }
+    // removeload:function () {
+    //     for (var i = this.start; i <= this.end; i++) {
+    //         var nFrame = this.frames;
+    //         if (i == this.end) { //最后一张图片计算剩余帧数
+    //             nFrame = this.totalFrame % this.frames;
+    //
+    //         }
+    //         this.game.load.spritesheet(this.prefix + i, this.filepath + this.prefix + i + this.postfix, this.frameWidth, this.frameHeight, nFrame);
+    //     }
+    //
+    // }
 };
 
 
