@@ -19,7 +19,9 @@
 
 起初是基于phaser的。
 若不使用phaser，仍可利用[Gulp](http://gulpjs.com/)自动化构建工具。
-ECMAScript version ES5
+
+*ECMAScript version ES5*
+
 ~~利用[Bower](https://bower.io/)添加所要用的插件eg. threejs, pixijs~~
 
 >Note:...psst! While Bower is maintained, we recommend yarn and webpack for new front-end projects!
