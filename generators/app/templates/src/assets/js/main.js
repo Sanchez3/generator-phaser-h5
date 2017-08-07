@@ -77,18 +77,19 @@ window.h5 = {
     },
     cssInit: function() {
         var that = this;
-        // that.rootResize1();
-        // window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
-        //     if (window.orientation == 90 || window.orientation == -90) {
-        //         //横屏
-        //         //_.renderShuping();
-        //         that.rootResize();
-
-        //     } else {
-        //         //竖屏
-        //         //_.closeShuping();
-        //     }
-        // }, false);
+        /*
+        that.rootResize1();
+        window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+            if (window.orientation == 90 || window.orientation == -90) {
+                //横屏
+                //_.renderShuping();
+                that.rootResize();
+            } else {
+                //竖屏
+                //_.closeShuping();
+            }
+        }, false);
+        */
         var noChangeCountToEnd = 100,
             noEndTimeout = 1000;
         that.rootResize2();

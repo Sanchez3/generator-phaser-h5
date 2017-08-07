@@ -15,9 +15,6 @@
  */
 
 
-//prefix,startIndex,endIndex,,frameWidth,frameHeight,totalFrames,frameRate
-
-
 function MovieClip(game, _x, _y, _width, _height, videoConfig, onComplete) {
     this.game = game;
     this.videoConfig = videoConfig;
