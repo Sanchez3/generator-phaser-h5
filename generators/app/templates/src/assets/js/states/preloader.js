@@ -9,7 +9,7 @@
 
     Preloader.prototype = {
         loadResources: function() {
-            // this.load.spritesheet('person1', '../../assets/img/p2/person1.png', 194, 386, 2);
+            // this.load.spritesheet('person1', './assets/img/p2/person1.png', 194, 386, 2);
             // var fData = {
             //     'frames': {
 
@@ -234,14 +234,14 @@
             //         'smartupdate': '$TexturePacker:SmartUpdate:2f213a6b451f9f5719773418dfe80ae8$'
             //     }
             // };
-            // this.load.atlas('fighter', '../../assets/img/fighter.png', null, fData);
+            // this.load.atlas('fighter', './assets/img/fighter.png', null, fData);
 
             //video 无法监控
             //webmc
-            // this.load.video('pv', '../../assets/video/pv.mp4');
-            // this.load.spritesheet('cloader', '../../assets/img/qloader.png', 128, 128, 12);
+            // this.load.video('pv', './assets/video/pv.mp4');
+            // this.load.spritesheet('cloader', './assets/img/qloader.png', 128, 128, 12);
             //p2
-            // this.load.image('personall', '../../assets/img/p2/person_all.png');
+            // this.load.image('personall', './assets/img/p2/person_all.png');
             this.load.start();
 
         },
