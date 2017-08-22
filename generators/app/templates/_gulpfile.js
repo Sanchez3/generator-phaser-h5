@@ -14,6 +14,9 @@ var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     vinylPaths = require('vinyl-paths'),
     pump = require('pump'),
+    rev = require('gulp-rev'),
+    revCollector = require('gulp-rev-collector'),
+    buffer = require('gulp-buffer'),
     paths;
 
 var watching = false;
@@ -29,7 +32,13 @@ paths = {
     entry: './src/assets/js/main.js',
     dist: './dist/assets/',
     distcss: './dist/assets/css/',
-    distjs: './dist/assets/js'
+    distjs: './dist/assets/js',
+    rev: {
+        revJson: './dist/rev/**/*.json',
+        src: './dist/*.html'
+    },
+    distrevjs: './dist/rev/js',
+    distrevcss: './dist/rev/css'
 };
 
 gulp.task('clean', function(cb) {
@@ -74,7 +83,8 @@ gulp.task('compile', ['clean'], function(cb) {
     //     bundler = watchify(bundler);
     //     bundler.on('update', bundlee);
     // }
-    pump([browserify({
+    pump([
+        browserify({
             cache: {},
             packageCache: {},
             fullPaths: true,
@@ -85,7 +95,11 @@ gulp.task('compile', ['clean'], function(cb) {
         jshint('.jshintrc'),
         jshint.reporter('default'),
         gulpif(!watching, streamify(uglify())),
-        gulp.dest(paths.distjs)
+        buffer(),
+        rev(),
+        gulp.dest(paths.distjs),
+        rev.manifest(),
+        gulp.dest(paths.distrevjs)
     ], cb);
 });
 
@@ -97,7 +111,10 @@ gulp.task('cleancss', ['clean'], function(cb) {
             removeEmpty: true
         })),
         rename({ suffix: '.min' }),
-        gulp.dest(paths.distcss)
+        rev(),
+        gulp.dest(paths.distcss),
+        rev.manifest(),
+        gulp.dest(paths.distrevcss)
     ], cb);
 });
 
@@ -109,10 +126,21 @@ gulp.task('processhtml', ['clean'], function(cb) {
     ], cb);
 });
 
+gulp.task('rev', ['compile', 'cleancss'], function(cb) {
+    pump([
+        gulp.src([paths.rev.revJson, paths.rev.src]),
+        revCollector({
+            replaceReved: true,
+        }),
+        gulp.dest('./dist/')
+    ], cb);
+});
+
+
 gulp.task('htmlmin', ['processhtml'], function(cb) {
     pump([
         gulp.src('dist/index.html'),
-        gulpif(!watching, htmlmin()),
+        gulpif(!watching, htmlmin({ collapseWhitespace: true })),
         gulp.dest('./dist/')
     ], cb);
 
@@ -124,6 +152,7 @@ gulp.task('html', ['build'], function(cb) {
         connect.reload()
     ], cb);
 });
+
 
 gulp.task('connect', function() {
     connect.server({
@@ -139,4 +168,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['connect', 'watch', 'build']);
-gulp.task('build', ['clean', 'copy', 'copylibs', 'compile', 'cleancss', 'processhtml', 'htmlmin']);
+gulp.task('build', ['clean', 'copy', 'copylibs', 'compile', 'cleancss', 'htmlmin', 'rev']);

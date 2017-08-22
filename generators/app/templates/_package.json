@@ -21,6 +21,8 @@
         "gulp-streamify": "latest",
         "gulp-uglify": "latest",
         "gulp-watch": "latest",
+        "gulp-rev": "latest",
+        "gulp-rev-collector": "latest",
         "pump": "latest",
         "tiny-lr": "latest",
         "vinyl-paths": "latest",
