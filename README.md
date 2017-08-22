@@ -78,7 +78,7 @@ The result in  `dist/`
 *Note:  `npm install <packages> --save-dev`*
 
 - [browserify](https://github.com/substack/node-browserify)  for bundling up all of your dependencies.
-- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml' , etc. 
+- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml', 'rev', etc. 
 - [jshint](http://jshint.com/)  for Static Code Analysis Tool
 
 ### dependencies:
@@ -197,6 +197,8 @@ Rebuild Directory Structure
 [开发自己的 yeoman 脚手架（generator-reactpackage）](https://juejin.im/entry/57c938510e3dd90063e3c725)
 
 [前端模块及依赖管理的新选择：Browserify](http://acgtofe.com/posts/2015/06/modular-javascript-with-browserify)
+
+[gulp-rev：项目部署缓存解决方案](http://www.cnblogs.com/1wen/p/5421212.html)
 
 
 
