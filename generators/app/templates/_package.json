@@ -10,6 +10,7 @@
         "browserify": "latest",
         "del": "latest",
         "gulp": "latest",
+        "gulp-buffer":"latest",
         "gulp-connect": "latest",
         "gulp-download": "latest",
         "gulp-if": "latest",
