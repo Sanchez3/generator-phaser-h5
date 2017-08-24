@@ -8,9 +8,10 @@
     State1.prototype = {
         preload: function() {},
         create: function() {
-            var text = "- phaser -\n with a sprinkle of \n pixi dust.";
-            var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
-            var t = this.add.text(this.width / 2 - 300, 0, text, style);
+            var text = "- phaser -\n with a sprinkle of \n pixi dust.\n Now, Your Show Time";
+            var style = { font: "60px Arial", fill: "#ff0044", align: "center" };
+            var t = this.add.text(this.width / 2, this.height / 2, text, style);
+            t.anchor.setTo(0.5);
 
         },
         update: function() {}
