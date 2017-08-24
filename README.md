@@ -78,7 +78,7 @@ The result in  `dist/`
 *Note:  `npm install <packages> --save-dev`*
 
 - [browserify](https://github.com/substack/node-browserify)  for bundling up all of your dependencies.
-- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml', 'rev', etc. 
+- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'concatlibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml', 'rev', etc. 
 - [jshint](http://jshint.com/)  for Static Code Analysis Tool
 
 ### dependencies:
@@ -114,9 +114,9 @@ The result in  `dist/`
 
 - [browserify-shim](https://github.com/thlorenz/browserify-shim)  Make CommonJS-Incompatible Files Browserifyable
 
-- Local  Use gulp `copylibs` task :
+- Local In `gulpfile.js` Write Libs paths and Run gulp `concatlibs` task:
   ```html
-  <script src="/assets/js/lib/phaser-minimum.min.js"></script>
+  <script src="/assets/js/lib/libs.js"></script>
   ```
 
   ​
