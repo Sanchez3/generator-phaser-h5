@@ -17,6 +17,7 @@ var gulp = require('gulp'),
     rev = require('gulp-rev'),
     revCollector = require('gulp-rev-collector'),
     buffer = require('gulp-buffer'),
+    concat = require('gulp-concat'),
     paths;
 
 var watching = false;
@@ -25,7 +26,7 @@ paths = {
     assets: ['src/assets/**/*', '!src/assets/css/*', '!src/assets/js/*', '!src/assets/js/**/*.js'],
     css: ['src/assets/css/*.css'],
     libs: [
-        'node_modules/Swiper/dist/js/swiper.jquery.min.js',
+        'node_modules/howler/dist/howler.min.js',
         'node_modules/phaser/build/phaser.min.js'
     ],
     js: ['src/assets/js/*.js', 'src/assets/js/**/*.js'],
@@ -55,9 +56,9 @@ gulp.task('copy', ['clean'], function(cb) {
 });
 
 
-gulp.task('copylibs', ['clean'], function(cb) {
-
+gulp.task('concatlibs', ['clean'], function(cb) {
     pump([gulp.src(paths.libs),
+        concat('libs.js'),
         gulpif(!watching, uglify()),
         gulp.dest(paths.dist + 'js/lib')
     ], cb);
@@ -126,7 +127,7 @@ gulp.task('processhtml', ['clean'], function(cb) {
     ], cb);
 });
 
-gulp.task('rev', ['compile', 'cleancss'], function(cb) {
+gulp.task('rev', ['compile','cleancss'], function(cb) {
     pump([
         gulp.src([paths.rev.revJson, paths.rev.src]),
         revCollector({
@@ -168,5 +169,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['connect', 'watch', 'build']);
-
-gulp.task('build', ['clean', 'copy', 'copylibs', 'compile', 'cleancss', 'htmlmin', 'rev']);
+gulp.task('build', ['clean', 'copy', 'concatlibs', 'compile', 'cleancss','htmlmin','rev']);
