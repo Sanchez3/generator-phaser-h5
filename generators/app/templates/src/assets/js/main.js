@@ -135,7 +135,7 @@ window.h5.cssInit().eventInit();
 
 function showStats() {
     var stats = new Stats();
-    stats.showPanel(1); // 0: fps, 1: ms, 2: mb, 3+: custom
+    stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
     var fs = document.createElement('div');
     fs.style.position = 'absolute';
     fs.style.left = 0;
