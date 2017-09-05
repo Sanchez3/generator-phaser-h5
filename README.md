@@ -79,7 +79,6 @@ The result in  `dist/`
 
 - [browserify](https://github.com/substack/node-browserify)  for bundling up all of your dependencies.
 - [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'concatlibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml', 'rev', etc. 
-  - 'gulp-sass' for converting to css (Optional)
 - [jshint](http://jshint.com/)  for Static Code Analysis Tool
 
 ### dependencies:
