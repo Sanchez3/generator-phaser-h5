@@ -58,12 +58,12 @@ module.exports = class extends Generator {
         mkdirp('src/assets/media');
         if (this.projectSass) {
             this.fs.copyTpl(
-                this.templatePath('_package.json'),
+                this.templatePath('_package_sass.json'),
                 this.destinationPath('package.json'),
                 this
             );
             this.fs.copy(
-                this.templatePath('_gulpfile.js'),
+                this.templatePath('_gulpfile_sass.js'),
                 this.destinationPath('gulpfile.js'),
                 this
             );
