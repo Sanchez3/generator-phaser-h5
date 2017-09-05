@@ -30,11 +30,18 @@ module.exports = class extends Generator {
                 name: 'projectLicense',
                 message: 'Please choose license:',
                 choices: ['MIT', 'ISC', 'Apache-2.0', 'AGPL-3.0']
+            },
+            {
+                type: 'confirm',
+                name: 'projectSass',
+                message: 'Do You Use Sass?',
+                default: false
             }
         ]).then(answers => {
             this.projectName = answers.projectName ? answers.projectName : ' ';
             this.projectDesc = answers.projectDesc ? answers.projectDesc : ' ';
             this.projectLicense = answers.projectLicense || 'MIT';
+            this.projectSass = answers.projectSass || false;
         });
     }
     configuring() {
@@ -49,22 +56,36 @@ module.exports = class extends Generator {
             this
         );
         mkdirp('src/assets/media');
-        this.fs.copyTpl(
-            this.templatePath('_package.json'),
-            this.destinationPath('package.json'),
-            this
-        );
+        if (this.projectSass) {
+            this.fs.copyTpl(
+                this.templatePath('_package.json'),
+                this.destinationPath('package.json'),
+                this
+            );
+            this.fs.copy(
+                this.templatePath('_gulpfile.js'),
+                this.destinationPath('gulpfile.js'),
+                this
+            );
+        } else {
+            this.fs.copyTpl(
+                this.templatePath('_package.json'),
+                this.destinationPath('package.json'),
+                this
+            );
+            this.fs.copy(
+                this.templatePath('_gulpfile.js'),
+                this.destinationPath('gulpfile.js'),
+                this
+            );
+        }
 
         this.fs.copy(
             this.templatePath('jshintrc'),
             this.destinationPath('.jshintrc'),
             this
         );
-        this.fs.copy(
-            this.templatePath('_gulpfile.js'),
-            this.destinationPath('gulpfile.js'),
-            this
-        );
+
 
     }
     install() { //安装依赖

@@ -29,7 +29,8 @@
     "vinyl-paths": "latest",
     "vinyl-source-stream": "latest",
     "watchify": "latest",
-    "jshint": "latest"
+    "jshint": "latest",
+    "gulp-sass":"latest"
   },
   "dependencies": {
     "howler": "latest",

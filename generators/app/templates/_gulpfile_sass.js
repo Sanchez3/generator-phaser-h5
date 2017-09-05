@@ -18,6 +18,7 @@ var gulp = require('gulp'),
     revCollector = require('gulp-rev-collector'),
     buffer = require('gulp-buffer'),
     concat = require('gulp-concat'),
+    sass = require('gulp-sass'),
     paths;
 
 var watching = false;
@@ -25,6 +26,7 @@ var watching = false;
 paths = {
     assets: ['src/assets/**/*', '!src/assets/css/*', '!src/assets/js/*', '!src/assets/js/**/*.js'],
     css: ['src/assets/css/*.css'],
+    sass: ['src/assets/css/*.scss'],
     libs: [
         'node_modules/howler/dist/howler.min.js',
         'node_modules/phaser/build/phaser.min.js'
@@ -104,6 +106,20 @@ gulp.task('compile', ['clean'], function(cb) {
     ], cb);
 });
 
+gulp.task('sass', ['clean'], function(cb) {
+    pump([
+        gulp.src(paths.sass),
+        sass().on('error', sass.logError),
+        gulpif(!watching, cleancss({
+            keepSpecialComments: false,
+            removeEmpty: true
+        })),
+        rename({ suffix: '.min' }),
+        gulp.dest(paths.distcss)
+    ], cb);
+});
+
+
 gulp.task('cleancss', ['clean'], function(cb) {
     pump([
         gulp.src(paths.css),
@@ -165,8 +181,8 @@ gulp.task('connect', function() {
 
 gulp.task('watch', function() {
     watching = true;
-    return gulp.watch(['./src/index.html', paths.css, paths.js], ['build', 'html']);
+    return gulp.watch(['./src/index.html', paths.css, paths.sass, paths.js], ['build', 'html']);
 });
 
 gulp.task('default', ['connect', 'watch', 'build']);
-gulp.task('build', ['clean', 'copy', 'concatlibs', 'compile', 'cleancss', 'htmlmin', 'rev']);
+gulp.task('build', ['clean', 'copy', 'concatlibs', 'compile', 'sass', 'cleancss', 'htmlmin', 'rev']);
