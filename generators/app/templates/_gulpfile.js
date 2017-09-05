@@ -104,6 +104,15 @@ gulp.task('compile', ['clean'], function(cb) {
     ], cb);
 });
 
+gulp.task('sass', ['clean'], function(cb) {
+    pump([
+        gulp.src(paths.sass),
+        sass().on('error', sass.logError),
+        gulp.dest(paths.distcss),
+    ], cb);
+});
+
+
 gulp.task('cleancss', ['clean'], function(cb) {
     pump([
         gulp.src(paths.css),
@@ -127,7 +136,7 @@ gulp.task('processhtml', ['clean'], function(cb) {
     ], cb);
 });
 
-gulp.task('rev', ['compile','cleancss'], function(cb) {
+gulp.task('rev', ['compile', 'cleancss'], function(cb) {
     pump([
         gulp.src([paths.rev.revJson, paths.rev.src]),
         revCollector({
@@ -165,8 +174,8 @@ gulp.task('connect', function() {
 
 gulp.task('watch', function() {
     watching = true;
-    return gulp.watch(['./src/index.html', paths.css, paths.js], ['build', 'html']);
+    return gulp.watch(['./src/index.html', paths.css, paths.sass, paths.js], ['build', 'html']);
 });
 
 gulp.task('default', ['connect', 'watch', 'build']);
-gulp.task('build', ['clean', 'copy', 'concatlibs', 'compile', 'cleancss','htmlmin','rev']);
+gulp.task('build', ['clean', 'copy', 'concatlibs', 'compile', 'sass', 'cleancss', 'htmlmin', 'rev']);
