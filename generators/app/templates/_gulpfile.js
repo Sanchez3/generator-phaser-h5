@@ -18,6 +18,7 @@ var gulp = require('gulp'),
     revCollector = require('gulp-rev-collector'),
     buffer = require('gulp-buffer'),
     concat = require('gulp-concat'),
+    sass = require('gulp-sass'),
     paths;
 
 var watching = false;
@@ -108,7 +109,12 @@ gulp.task('sass', ['clean'], function(cb) {
     pump([
         gulp.src(paths.sass),
         sass().on('error', sass.logError),
-        gulp.dest(paths.distcss),
+        gulpif(!watching, cleancss({
+            keepSpecialComments: false,
+            removeEmpty: true
+        })),
+        rename({ suffix: '.min' }),
+        gulp.dest(paths.distcss)
     ], cb);
 });
 
