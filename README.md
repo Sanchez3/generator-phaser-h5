@@ -1,4 +1,4 @@
-# 前端h5项目快速生成器
+# 基于Gulp的前端h5项目快速生成器
 
 <div align="left">
     <div>
