@@ -132,18 +132,17 @@ The result in  `dist/`
     .
     ├── dist
     ├── src
-    │   ├── assets
-    │   │   ├── img
-    │   │   ├── media         #video audio
-    │   │   ├── css
-    │   │   │   └── css.css
-    │   │   └── js
-    │   │       ├── entities
-    │   │       ├── states    #phaser state
-    │   │       │
-    │   │       └── main.js
-    │   │
-    │   └── bower_components  #js libraries
+    │   └── assets
+    │       ├── img
+    │       ├── media         #video audio
+    │       ├── css
+    │       │   ├── css.css
+    │       │   └── sass.scss
+    │       └── js
+    │           ├── entities
+    │           ├── states    #phaser state
+    │           │
+    │           └── main.js    
     │
     ├── node_modules
     ├── index.html
@@ -163,7 +162,7 @@ The result in  `dist/`
     │   │   └── css.min.css
     │   └── js
     │       ├── lib
-    │       │    └── *.js
+    │       │    └── libs.js
     │       └── main.min.js
     │
     └── index.html
