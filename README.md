@@ -134,7 +134,7 @@ The result in  `dist/`
     ├── src
     │   └── assets
     │       ├── img
-    │       ├── media         #video audio
+    │       ├── media         #video audio resources
     │       ├── css
     │       │   ├── css.css
     │       │   └── sass.scss
