@@ -30,7 +30,8 @@
     "vinyl-source-stream": "latest",
     "watchify": "latest",
     "jshint": "latest",
-    "gulp-sass":"latest"
+    "gulp-sass":"latest",
+    "babel-preset-env": "^1.6.0",
   },
   "dependencies": {
     "howler": "latest",
