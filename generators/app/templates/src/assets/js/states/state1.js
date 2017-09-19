@@ -1,5 +1,5 @@
 /**
- * Created by sanchez
+ * Created by Sanchez
  */
 (function() {
     'use strict';

@@ -1,5 +1,5 @@
 /**
- * Created by sanchez 
+ * Created by Sanchez 
  */
 'use strict';
 window.game = new Phaser.Game('100', '100', Phaser.CANVAS, 'mycanvas', null, true);
@@ -8,6 +8,8 @@ window.game.state.add('Preloader', require('./states/preloader'));
 window.game.state.add('State1', require('./states/state1'));
 window.game.state.start('Boot');
 
+//Can Use ES6 
+const use_e6 = true;
 
 window.h5 = {
     rootResize2: function() {

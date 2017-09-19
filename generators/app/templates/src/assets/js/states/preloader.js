@@ -1,5 +1,5 @@
 /**
- * Created by sanchez on 17/5/22.
+ * Created by Sanchez
  */
 (function() {
     'use strict';
