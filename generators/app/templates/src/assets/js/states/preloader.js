@@ -236,8 +236,7 @@
             // };
             // this.load.atlas('fighter', './assets/img/fighter.png', null, fData);
 
-            //video 无法监控
-            //webmc
+            //video 移动端无法监控 
             // this.load.video('pv', './assets/video/pv.mp4');
             // this.load.spritesheet('cloader', './assets/img/qloader.png', 128, 128, 12);
             //p2
