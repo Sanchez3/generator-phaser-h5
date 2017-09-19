@@ -22,7 +22,7 @@
 
 *ECMAScript version ES5* 
 
-##### Also  Support *ECMAScript version ES6*
+**Also  Support *ECMAScript version ES6***
 
 ~~利用[Bower](https://bower.io/)添加所要用的插件eg. threejs, pixijs~~
 
