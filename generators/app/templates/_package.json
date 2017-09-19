@@ -1,46 +1,51 @@
 {
-  "name": "<%= projectName %>",
-  "version": "1.0.0",
-  "description": "<%= projectDesc %>",
-  "license": "<%= projectLicense %>",
-  "keywords": [],
-  "repository": "",
-  "devDependencies": {
-    "browserify": "latest",
-    "del": "latest",
-    "gulp": "latest",
-    "gulp-concat": "latest",
-    "gulp-buffer": "latest",
-    "gulp-connect": "latest",
-    "gulp-download": "latest",
-    "gulp-if": "latest",
-    "gulp-jshint": "latest",
-    "gulp-clean-css": "latest",
-    "gulp-htmlmin": "latest",
-    "gulp-processhtml": "latest",
-    "gulp-rename": "latest",
-    "gulp-streamify": "latest",
-    "gulp-uglify": "latest",
-    "gulp-watch": "latest",
-    "gulp-rev": "latest",
-    "gulp-rev-collector": "latest",
-    "pump": "latest",
-    "tiny-lr": "latest",
-    "vinyl-paths": "latest",
-    "vinyl-source-stream": "latest",
-    "watchify": "latest",
-    "jshint": "latest",
-    "babel-preset-env": "^1.6.0",
-  },
-  "dependencies": {
-    "howler": "latest",
-    "jquery": "^3.2.1",
-    "gsap": "latest",
-    "phaser": "^2.6.2",
-    "animate.css": "latest"
-  },
-  "scripts": {
-    "start": "node ./node_modules/gulp/bin/gulp.js",
-    "build": "node ./node_modules/gulp/bin/gulp.js build"
-  }
+    "name": "<%= projectName %>",
+    "version": "1.0.0",
+    "description": "<%= projectDesc %>",
+    "license": "<%= projectLicense %>",
+    "keywords": [],
+    "repository": "",
+    "devDependencies":
+    {
+        "browserify": "latest",
+        "del": "latest",
+        "gulp": "latest",
+        "gulp-concat": "latest",
+        "gulp-buffer": "latest",
+        "gulp-connect": "latest",
+        "gulp-download": "latest",
+        "gulp-if": "latest",
+        "gulp-jshint": "latest",
+        "gulp-clean-css": "latest",
+        "gulp-htmlmin": "latest",
+        "gulp-processhtml": "latest",
+        "gulp-rename": "latest",
+        "gulp-streamify": "latest",
+        "gulp-uglify": "latest",
+        "gulp-watch": "latest",
+        "gulp-rev": "latest",
+        "gulp-rev-collector": "latest",
+        "gulp-babel": "^7.0.0",
+        "pump": "latest",
+        "tiny-lr": "latest",
+        "vinyl-paths": "latest",
+        "vinyl-source-stream": "latest",
+        "watchify": "latest",
+        "jshint": "latest",
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.6.0"
+    },
+    "dependencies":
+    {
+        "howler": "latest",
+        "jquery": "^3.2.1",
+        "gsap": "latest",
+        "phaser": "^2.6.2",
+        "animate.css": "latest"
+    },
+    "scripts":
+    {
+        "start": "node ./node_modules/gulp/bin/gulp.js",
+        "build": "node ./node_modules/gulp/bin/gulp.js build"
+    }
 }

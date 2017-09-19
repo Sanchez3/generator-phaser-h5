@@ -19,6 +19,7 @@ var gulp = require('gulp'),
     buffer = require('gulp-buffer'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
+    babel = require('gulp-babel'),
     paths;
 
 var watching = false;
@@ -99,6 +100,9 @@ gulp.task('compile', ['clean'], function(cb) {
         jshint.reporter('default'),
         gulpif(!watching, streamify(uglify())),
         buffer(),
+        babel({
+            presets: ['env']
+        }),
         rev(),
         gulp.dest(paths.distjs),
         rev.manifest(),
