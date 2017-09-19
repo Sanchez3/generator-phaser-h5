@@ -20,7 +20,9 @@
 起初是基于phaser的。
 若不使用phaser，仍可利用[Gulp](http://gulpjs.com/)自动化构建工具。
 
-*ECMAScript version ES5*
+*ECMAScript version ES5* 
+
+##### Also  Support *ECMAScript version ES6*
 
 ~~利用[Bower](https://bower.io/)添加所要用的插件eg. threejs, pixijs~~
 
@@ -77,10 +79,11 @@ The result in  `dist/`
 ### devDependencies:
 *Note:  `npm install <packages> --save-dev`*
 
-- [browserify](https://github.com/substack/node-browserify)  for bundling up all of your dependencies.
-- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'concatlibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml', 'rev', etc. 
+- [browserify](https://github.com/substack/node-browserify)  for bundling up all of your dependencies
+- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'concatlibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml', 'rev', etc.
   - [gulp-sass](https://www.npmjs.com/package/gulp-sass) for converting to css (Optional)
 - [jshint](http://jshint.com/)  for Static Code Analysis Tool
+- [Babel](https://babeljs.io/) for the latest version of JavaScript through syntax transformers
 
 ### dependencies:
 *Note:  `npm install <packages>`*
