@@ -17,7 +17,7 @@ module.exports = class extends Generator {
         return this.prompt([{
                 type: 'input',
                 name: 'projectName',
-                message: 'What\'s the name of your application',
+                message: 'What\'s the name of your application(in English Please)',
                 default: foldername
             },
             {
