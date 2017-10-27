@@ -18,7 +18,7 @@ var gulp = require('gulp'),
     revCollector = require('gulp-rev-collector'),
     buffer = require('gulp-buffer'),
     concat = require('gulp-concat'),
-     babel = require('gulp-babel'),
+    babel = require('gulp-babel'),
     paths;
 
 var watching = false;
@@ -26,10 +26,17 @@ var watching = false;
 paths = {
     assets: ['src/assets/**/*', '!src/assets/css/*', '!src/assets/js/*', '!src/assets/js/**/*.js'],
     css: ['src/assets/css/*.css'],
-    libs: [
-        'node_modules/howler/dist/howler.min.js',
-        'node_modules/phaser/build/phaser.min.js'
-    ],
+    libs: {
+        js: [
+            'node_modules/howler/dist/howler.min.js',
+            'node_modules/phaser/build/phaser.min.js',
+            'node_modules/swiper/dist/js/swiper.min.js'
+        ],
+        css: [
+            'node_modules/animate.css/animate.min.css',
+            'node_modules/swiper/dist/css/swiper.min.css'
+        ]
+    },
     js: ['src/assets/js/*.js', 'src/assets/js/**/*.js'],
     entry: './src/assets/js/main.js',
     dist: './dist/assets/',
@@ -56,9 +63,14 @@ gulp.task('copy', ['clean'], function(cb) {
     ], cb);
 });
 
+gulp.task('copycss', ['clean'], function(cb) {
+    pump([gulp.src(paths.libs.css),
+        gulp.dest(paths.distcss)
+    ], cb);
+});
 
 gulp.task('concatlibs', ['clean'], function(cb) {
-    pump([gulp.src(paths.libs),
+    pump([gulp.src(paths.libs.js),
         concat('libs.js'),
         gulpif(!watching, uglify()),
         gulp.dest(paths.dist + 'js/lib')
@@ -173,4 +185,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['connect', 'watch', 'build']);
-gulp.task('build', ['clean', 'copy', 'concatlibs', 'compile', 'cleancss', 'htmlmin', 'rev']);
+gulp.task('build', ['clean', 'copy', 'copycss', 'concatlibs', 'compile', 'cleancss', 'htmlmin', 'rev']);

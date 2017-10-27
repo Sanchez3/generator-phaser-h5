@@ -42,7 +42,8 @@
         "jquery": "^3.2.1",
         "gsap": "latest",
         "phaser": "^2.6.2",
-        "animate.css": "latest"
+        "animate.css": "latest",
+        "swiper": "latest"
     },
     "scripts":
     {
