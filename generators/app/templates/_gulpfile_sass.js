@@ -110,11 +110,11 @@ gulp.task('compile', ['clean'], function(cb) {
         source('main.min.js'),
         jshint('.jshintrc'),
         jshint.reporter('default'),
-        gulpif(!watching, streamify(uglify())),
         buffer(),
         babel({
             presets: ['env']
         }),
+        gulpif(!watching, streamify(uglify())),
         rev(),
         gulp.dest(paths.distjs),
         rev.manifest(),
