@@ -76,6 +76,10 @@ The result in  `dist/`
 
 通过npm管理插件，devDependencies  里面的插件只用于开发环境，不用于生产环境，而 dependencies  是需要发布到生产环境的。
 
+> Note: Please do not put test harnesses, transpilers or `latest` "Matches latest version", `*` "Matches any version" in your dependencies object!
+>
+> Recommend: `version` "Specifying version", `^version` "Compatible with version"
+
 ### devDependencies:
 *Note:  `npm install <packages> --save-dev`*
 
