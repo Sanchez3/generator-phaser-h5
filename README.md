@@ -162,6 +162,8 @@ The result in  `dist/`
     │   ├── img
     │   ├── media
     │   ├── css
+   	│ 	│	├── lib
+    │   │   │	 └── *.css 	   #lib css such as animate.min.css, swiper.min.css
     │   │   └── css.min.css
     │   └── js
     │       ├── lib
