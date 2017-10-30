@@ -39,8 +39,8 @@ paths = {
     },
     js: ['src/assets/js/*.js', 'src/assets/js/**/*.js'],
     entry: './src/assets/js/main.js',
-    dist: './dist/assets/',
-    distcss: './dist/assets/css/',
+    dist: './dist/assets',
+    distcss: './dist/assets/css',
     distjs: './dist/assets/js',
     rev: {
         revJson: './dist/rev/**/*.json',
@@ -65,7 +65,7 @@ gulp.task('copy', ['clean'], function(cb) {
 
 gulp.task('copycss', ['clean'], function(cb) {
     pump([gulp.src(paths.libs.css),
-        gulp.dest(paths.distcss)
+        gulp.dest(paths.distcss + '/lib')
     ], cb);
 });
 
@@ -73,7 +73,7 @@ gulp.task('concatlibs', ['clean'], function(cb) {
     pump([gulp.src(paths.libs.js),
         concat('libs.js'),
         gulpif(!watching, uglify()),
-        gulp.dest(paths.dist + 'js/lib')
+        gulp.dest(paths.dist + '/js/lib')
     ], cb);
 });
 

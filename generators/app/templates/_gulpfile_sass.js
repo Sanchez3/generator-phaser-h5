@@ -41,7 +41,7 @@ paths = {
     },
     js: ['src/assets/js/*.js', 'src/assets/js/**/*.js'],
     entry: './src/assets/js/main.js',
-    dist: './dist/assets/',
+    dist: './dist/assets',
     distcss: './dist/assets/css',
     distjs: './dist/assets/js',
     rev: {
