@@ -1,7 +1,2 @@
 .DS_Store
-generators/.DS_Store
-generators/app/.DS_Store
-generators/app/templates/.DS_Store
-generators/app/templates/.DS_Store
-generators/app/.DS_Store
-generators/.DS_Store
+*/.DS_Store
