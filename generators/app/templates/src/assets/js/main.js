@@ -108,7 +108,7 @@ window.h5 = {
                 clearTimeout(timeout);
                 interval = null;
                 timeout = null;
-                that.rootResize1();
+                that.rootResize2();
             };
             interval = setInterval(function() {
                 if (window.innerWidth === lastInnerWidth && window.innerHeight === lastInnerHeight) {
