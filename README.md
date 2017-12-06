@@ -166,11 +166,11 @@ The result in  `dist/`
     │   ├── img
     │   ├── media
     │   ├── css
-    │   │   ├── lib
-    │   │   │	 └── *.css 	   #lib css such as animate.min.css, swiper.min.css
+    │   │   ├── libs
+    │   │   │	 └── *.css 	   #libs css such as animate.min.css, swiper.min.css
     │   │   └── css.min.css
     │   └── js
-    │       ├── lib
+    │       ├── libs
     │       │    └── libs.js
     │       └── main.min.js
     │
