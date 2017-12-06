@@ -67,7 +67,7 @@ gulp.task('copy', ['clean'], function(cb) {
 
 gulp.task('copycss', ['clean'], function(cb) {
     pump([gulp.src(paths.libs.css),
-        gulp.dest(paths.distcss + '/lib')
+        gulp.dest(paths.distcss + '/libs')
     ], cb);
 });
 
@@ -75,7 +75,7 @@ gulp.task('concatlibs', ['clean'], function(cb) {
     pump([gulp.src(paths.libs.js),
         concat('libs.js'),
         gulpif(!watching, uglify()),
-        gulp.dest(paths.dist + '/js/lib')
+        gulp.dest(paths.dist + '/js/libs')
     ], cb);
 });
 
