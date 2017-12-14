@@ -1,6 +1,6 @@
 {
   "name": "generator-phaser-h5",
-  "version": "3.10.6",
+  "version": "3.10.7",
   "description": "A Yeoman generator to generate h5 games with phaser.js or not, based on Gulp!",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,7 @@
     "yosay": "^2.0.0"
   },
   "devDependencies": {
-    "fs-extra": "^4.0.0",
+    "fs-extra": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "mocha": "^4.0.1",
     "yeoman-assert": "^3.0.0",
