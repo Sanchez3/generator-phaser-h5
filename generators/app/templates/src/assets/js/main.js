@@ -2,7 +2,8 @@
  * Created by Sanchez 
  */
 'use strict';
-window.game = new Phaser.Game('100', '100', Phaser.CANVAS, 'canvas-wrapper', null, true);
+
+window.game = new Phaser.Game('100', '100', Phaser.AUTO, 'canvas-wrapper', null, true);
 window.game.state.add('Boot', require('./states/boot'));
 window.game.state.add('Preloader', require('./states/preloader'));
 window.game.state.add('State1', require('./states/state1'));
@@ -22,7 +23,7 @@ window.h5 = {
         return flag;
     },
     rootResize: function() {
-        //orientation landscape width=1334px
+        //orientation portrait width=750px height=1334px / WeChat width=750px height=1206px 
         var wFsize;
         //screen.width screen.height  bug !!!
         // var wWidth = (screen.width > 0) ? (window.innerWidth >= screen.width || window.innerWidth == 0) ? screen.width :
@@ -34,7 +35,7 @@ window.h5 = {
         if (wWidth > wHeight) {
             wHeight = wWidth;
         }
-        wFsize = wHeight / 13.34;
+        wFsize = wHeight / 7.5;
         document.getElementsByTagName('html')[0].style.fontSize = wFsize + 'px';
     },
     eventInit: function() {
