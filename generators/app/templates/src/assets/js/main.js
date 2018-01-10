@@ -4,9 +4,9 @@
 'use strict';
 
 window.game = new Phaser.Game('100', '100', Phaser.AUTO, 'canvas-wrapper', null, true);
-window.game.state.add('Boot', require('./states/boot'));
-window.game.state.add('Preloader', require('./states/preloader'));
-window.game.state.add('State1', require('./states/state1'));
+window.game.state.add('Boot', require('../states/boot'));
+window.game.state.add('Preloader', require('../states/preloader'));
+window.game.state.add('State1', require('../states/state1'));
 window.game.state.start('Boot');
 
 //Can Use ES6 

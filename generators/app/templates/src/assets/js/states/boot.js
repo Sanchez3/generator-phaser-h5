@@ -8,7 +8,7 @@
 
     Boot.prototype = {
         preload: function() {
-            // this.load.image('load_i1', 'assets/img/p1/load_i1.png');
+            // this.load.image('load_i1', '../assets/img/p1/load_i1.png');
             // var lsData3 = {
             //     'frames': [
 
@@ -108,7 +108,7 @@
             //         'smartupdate': '$TexturePacker:SmartUpdate:262b7393a6ab76aa959acef5936ba65b:acc9dc5f26120f32e9e157a174c1abde:0f229978f75819fd1693cd09fc50d366$'
             //     }
             // };
-            // this.load.atlasJSONArray('load_sprite3', 'assets/img/p1/load_sprite3.png', null, lsData3);
+            // this.load.atlasJSONArray('load_sprite3', '../assets/img/p1/load_sprite3.png', null, lsData3);
 
         },
 
