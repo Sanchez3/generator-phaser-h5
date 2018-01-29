@@ -80,6 +80,10 @@ The result in  `dist/`
 >
 > Recommend: `version` "Specifying version", `^version` "Compatible with version"
 
+前端发展很快，现代浏览器原生 API 已经足够好用。
+
+[You-Dont-Need-jQuery](https://github.com/nefe/You-Dont-Need-jQuery) 
+
 ### devDependencies:
 *Note:  `npm install <packages> --save-dev`*
 
@@ -94,7 +98,7 @@ The result in  `dist/`
 
 - [phaser-official](https://phaser.io/)  for HTML5 games and 2d canvas
 - [howler.js](https://howlerjs.com/)  for audio 
-- [jquery](https://jquery.com/)  for ajax 
+- ~~[jquery](https://jquery.com/)~~  [ajax](https://github.com/fdaciuk/ajax)  for ajax
 - [Gsap](https://greensock.com/gsap)  for javascript animation
 - [animate.css](https://daneden.github.io/animate.css/)  for CSS animation style 
 
