@@ -80,9 +80,7 @@ The result in  `dist/`
 >
 > Recommend: `version` "Specifying version", `^version` "Compatible with version"
 
-前端发展很快，现代浏览器原生 API 已经足够好用。
-
-[You-Dont-Need-jQuery](https://github.com/nefe/You-Dont-Need-jQuery) 
+前端发展很快，现代浏览器原生 API 已经足够好用，是时候抛弃[jQuery](https://jquery.com/)了。[You-Dont-Need-jQuery](https://github.com/nefe/You-Dont-Need-jQuery) 
 
 ### devDependencies:
 *Note:  `npm install <packages> --save-dev`*
