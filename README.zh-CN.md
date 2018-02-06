@@ -17,19 +17,20 @@
 
 [How do you think of some Chinese call HTML5 'H5'](https://news.ycombinator.com/item?id=9875940)
 
-Not only for Phaser, Add Dependencies you want.
+起初是基于phaser的。
+若不使用phaser，仍可利用[Gulp](http://gulpjs.com/)自动化构建工具。
 
 *ECMAScript version ES5* 
 
 **Also  Support *ECMAScript version ES6***
 
-~~[Bower](https://bower.io/) manages the things — frameworks, libraries, assets, and utilities.~~
+~~利用[Bower](https://bower.io/)添加所要用的插件eg. threejs, pixijs~~
 
 >Note:...psst! While Bower is maintained, we recommend yarn and webpack for new front-end projects!
 
 
 
-## Installation
+## 安装 / Installation
 >Note:  Install [Node.js](https://nodejs.org/en/), [Gulp](http://gulpjs.com/), ~~[Bower](https://bower.io/)~~ First
 
 - **Get  [Yeoman](http://yeoman.io/) and `generator-phaser-h5` via [npm](https://www.npmjs.com/).**
@@ -42,7 +43,7 @@ Not only for Phaser, Add Dependencies you want.
 
 
 
-## Usage
+## 使用 / Usage
 
 1. **Create a directory to keep your project contents and go into it.**
 
@@ -69,21 +70,17 @@ The result in  `dist/`
 
 
 
-## Plugins
+## 常用插件 / Plugins
 
-~~[Bower](https://bower.io/) manages plugins~~ 
+~~[Bower](https://bower.io/)管理插件~~ 
 
-npm manages plugins.
-
-`devDependencies` are for the development-related scripts, e.g. unit testing, packaging scripts, documentation generation, etc.
-
-`dependencies` are required for production use, and assumed required for dev as well.
+通过npm管理插件，devDependencies  里面的插件只用于开发环境，不用于生产环境，而 dependencies  是需要发布到生产环境的。
 
 > Note: Please do not put test harnesses, transpilers or `latest` "Matches latest version", `*` "Matches any version" in your dependencies object!
 >
 > Recommend: `version` "Specifying version", `^version` "Compatible with version"
 
-Frontend environments evolve rapidly nowadays, modern browsers have already implemented a great deal of DOM/BOM APIs which are good enough.  So [You-Dont-Need-jQuery](https://github.com/nefe/You-Dont-Need-jQuery) 
+前端发展很快，现代浏览器原生 API 已经足够好用，是时候抛弃[jQuery](https://jquery.com/)了。[You-Dont-Need-jQuery](https://github.com/nefe/You-Dont-Need-jQuery) 
 
 ### devDependencies:
 *Note:  `npm install <packages> --save-dev`*
@@ -137,9 +134,9 @@ Frontend environments evolve rapidly nowadays, modern browsers have already impl
 
 
 
-## Directory Structure
+## 文档目录结构 / Directory Structure
 
-**`gulp`**
+**开发时目录结构 `gulp`**
 ```sh
     .
     ├── dist
@@ -163,7 +160,7 @@ Frontend environments evolve rapidly nowadays, modern browsers have already impl
     └── .jshintrc   
 ```
 
-**`gulp build`**
+**打包后目录结构 `gulp build`**
 
 ```sh
    dist
@@ -172,7 +169,7 @@ Frontend environments evolve rapidly nowadays, modern browsers have already impl
     │   ├── media
     │   ├── css
     │   │   ├── libs
-    │   │   │	 └── *.css 	   #libs css e.g. animate.min.css, swiper.min.css, etc.
+    │   │   │	 └── *.css 	   #libs css such as animate.min.css, swiper.min.css
     │   │   └── css.min.css
     │   └── js
     │       ├── libs
@@ -184,7 +181,7 @@ Frontend environments evolve rapidly nowadays, modern browsers have already impl
 
 
 
-## Versions
+## 版本 / Versions
 
 ### 1.x.x
 
@@ -200,7 +197,7 @@ Rebuild Directory Structure
 
 
 
-## Reference
+## 参考链接 / Reference
 
 [Yeoman Generator API](http://yeoman.github.io/generator/)
 
