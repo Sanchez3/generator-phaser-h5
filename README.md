@@ -1,6 +1,7 @@
-# 基于Gulp的前端h5项目快速生成器
+# generator-phaser-h5
 
 <div align="left">
+
     <div>
         <a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="npm version" src="https://img.shields.io/npm/v/generator-phaser-h5.svg"></a>
         <a href="https://travis-ci.org/Sanchez3/generator-phaser-h5"><img alt="Travis CI Build Status" src="https://travis-ci.org/Sanchez3/generator-phaser-h5.svg?branch=master"></a>
@@ -9,6 +10,8 @@
         <a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="Downloads" src="https://img.shields.io/npm/dm/generator-phaser-h5.svg"></a>
     </div>
 </div>
+
+`generator-phaser-h5` is a [Yeoman](http://yeoman.io/) plugin that makes starting up [Phaser](http://phaser.io/) **h5** projects simple, quick and easy.
 
 
 **h5 ≠ `<h5></h5>` ,  h5 ≠ html5,  h5 ≠ car haval5.**
@@ -73,7 +76,7 @@ The result in  `dist/`
 
 ~~[Bower](https://bower.io/) manages plugins~~ 
 
-npm manages plugins.
+[npm](https://www.npmjs.com/) manages plugins.
 
 `devDependencies` are for the development-related scripts, e.g. unit testing, packaging scripts, documentation generation, etc.
 
@@ -139,7 +142,8 @@ Frontend environments evolve rapidly nowadays, modern browsers have already impl
 
 ## Directory Structure
 
-**`gulp`**
+**In development, run `gulp`:**
+
 ```sh
     .
     ├── dist
@@ -163,7 +167,7 @@ Frontend environments evolve rapidly nowadays, modern browsers have already impl
     └── .jshintrc   
 ```
 
-**`gulp build`**
+**In production, run `gulp build`:**
 
 ```sh
    dist
