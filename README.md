@@ -10,6 +10,8 @@
     </div>
 </div>
 
+**Translations: [简体中文](https://github.com/Sanchez3/generator-phaser-h5/blob/master/README.zh-CN.md)**
+
 `generator-phaser-h5` is a [Yeoman](http://yeoman.io/) plugin that makes starting up [Phaser](http://phaser.io/) **h5** projects simple, quick and easy.
 
 
