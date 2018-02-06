@@ -20,9 +20,7 @@
 起初是基于phaser的。
 若不使用phaser，仍可利用[Gulp](http://gulpjs.com/)自动化构建工具。
 
-*ECMAScript version ES5* 
-
-**Also  Support *ECMAScript version ES6***
+*支持ECMAScript version ES5* ，**还支持 *ECMAScript version ES6***
 
 ~~利用[Bower](https://bower.io/)添加所要用的插件eg. threejs, pixijs~~
 
@@ -30,7 +28,7 @@
 
 
 
-## 安装 / Installation
+## 安装
 >Note:  Install [Node.js](https://nodejs.org/en/), [Gulp](http://gulpjs.com/), ~~[Bower](https://bower.io/)~~ First
 
 - **Get  [Yeoman](http://yeoman.io/) and `generator-phaser-h5` via [npm](https://www.npmjs.com/).**
@@ -43,7 +41,7 @@
 
 
 
-## 使用 / Usage
+## 使用
 
 1. **Create a directory to keep your project contents and go into it.**
 
@@ -70,7 +68,7 @@ The result in  `dist/`
 
 
 
-## 常用插件 / Plugins
+## 常用插件
 
 ~~[Bower](https://bower.io/)管理插件~~ 
 
@@ -134,7 +132,7 @@ The result in  `dist/`
 
 
 
-## 文档目录结构 / Directory Structure
+## 文档目录结构
 
 **开发时目录结构 `gulp`**
 ```sh
@@ -181,7 +179,7 @@ The result in  `dist/`
 
 
 
-## 版本 / Versions
+## 版本
 
 ### 1.x.x
 
@@ -197,7 +195,7 @@ Rebuild Directory Structure
 
 
 
-## 参考链接 / Reference
+## 参考链接
 
 [Yeoman Generator API](http://yeoman.github.io/generator/)
 
@@ -213,6 +211,6 @@ Rebuild Directory Structure
 
 
 
-## License
+## 协议
 
 [MIT License](https://github.com/Sanchez3/generator-phaser-h5/blob/master/LICENSE)
