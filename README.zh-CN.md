@@ -183,15 +183,15 @@ The result in  `dist/`
 
 ### 1.x.x
 
-Only for Phaser 
+仅支持Phaser插件
 
 ### 2.x.x
 
-Not only for Phaser , Add Dependencies you want , Without Bower
+支持更多插件，去除Bower
 
 ### 3.x.x
 
-Rebuild Directory Structure
+重构结构
 
 
 
