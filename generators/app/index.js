@@ -23,7 +23,7 @@ module.exports = class extends Generator {
             {
                 type: 'input',
                 name: 'projectDesc',
-                message: 'What\'s the description of your application:'
+                message: 'What\'s the description of your application(optional):'
             },
             {
                 type: 'list',
@@ -34,7 +34,7 @@ module.exports = class extends Generator {
             {
                 type: 'confirm',
                 name: 'projectSass',
-                message: 'Do You Use Sass?',
+                message: 'Do You Use Sass?(default:N)',
                 default: false
             }
         ]).then(answers => {
