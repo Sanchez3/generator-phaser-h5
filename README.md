@@ -64,8 +64,8 @@ Not only for Phaser, Add Dependencies you want.
 3. **Launch it!**
 
     ```sh
-    gulp          #Launches the server and opens the page for live development.
-    gulp build    #Prepare the h5 release for distribution.
+    gulp          # Launches the server and opens the page for live development.
+    gulp build    # Prepare the h5 release for distribution.
     ```
 
 
@@ -151,13 +151,13 @@ Frontend environments evolve rapidly nowadays, modern browsers have already impl
     ├── src
     │   └── assets
     │       ├── img
-    │       ├── media         #video audio resources
+    │       ├── media         # video audio resources
     │       ├── css
     │       │   ├── css.css
     │       │   └── sass.scss
     │       └── js
     │           ├── entities
-    │           ├── states    #phaser state
+    │           ├── states    # phaser state
     │           │
     │           └── main.js    
     │
@@ -177,7 +177,7 @@ Frontend environments evolve rapidly nowadays, modern browsers have already impl
     │   ├── media
     │   ├── css
     │   │   ├── libs
-    │   │   │	 └── *.css 	   #libs css e.g. animate.min.css, swiper.min.css, etc.
+    │   │   │	 └── *.css 	   # libs css e.g. animate.min.css, swiper.min.css, etc.
     │   │   └── css.min.css
     │   └── js
     │       ├── libs
