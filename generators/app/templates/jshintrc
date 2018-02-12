@@ -24,6 +24,9 @@
         "document":false,
         "THREE": false,
         "Phaser": false,
-        "TweenMax":false
+        "TweenMax":false,
+        "Stats":false,
+        "Swiper":false,
+        "Howler":false
     }
 }
