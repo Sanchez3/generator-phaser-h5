@@ -17,8 +17,8 @@
     "trailing": true,
     "globals": {
         "requestAnimationFrame": false,
-        "THREE": true,
-        "Phaser": true,
-        "TweenMax":true
+        "THREE": false,
+        "Phaser": false,
+        "TweenMax":false
     }
 }
