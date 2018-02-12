@@ -17,6 +17,11 @@
     "trailing": true,
     "globals": {
         "requestAnimationFrame": false,
+        "module":false,
+        "window":false,
+        "require":false,
+        "navigator":false,
+        "document":false,
         "THREE": false,
         "Phaser": false,
         "TweenMax":false
