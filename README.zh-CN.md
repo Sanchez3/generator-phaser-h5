@@ -17,8 +17,7 @@
 
 [How do you think of some Chinese call HTML5 'H5'](https://news.ycombinator.com/item?id=9875940)
 
-起初是基于phaser的。
-若不使用phaser，仍可利用[Gulp](http://gulpjs.com/)自动化构建工具。
+起初是基于phaser的。若不使用phaser，仍可利用[Gulp](http://gulpjs.com/)自动化构建工具。
 
 *支持ECMAScript version ES5* ，**还支持 *ECMAScript version ES6***
 
@@ -59,8 +58,8 @@
 3. **Launch it!**
 
     ```sh
-    gulp          #Launches the server and opens the page for live development.
-    gulp build    #Prepare the h5 release for distribution.
+    gulp          # Launches the server and opens the page for live development.
+    gulp build    # Prepare the h5 release for distribution.
     ```
 
 
@@ -141,13 +140,13 @@ The result in  `dist/`
     ├── src
     │   └── assets
     │       ├── img
-    │       ├── media         #video audio resources
+    │       ├── media         # video audio resources
     │       ├── css
     │       │   ├── css.css
     │       │   └── sass.scss
     │       └── js
     │           ├── entities
-    │           ├── states    #phaser state
+    │           ├── states    # phaser state
     │           │
     │           └── main.js    
     │
@@ -167,7 +166,7 @@ The result in  `dist/`
     │   ├── media
     │   ├── css
     │   │   ├── libs
-    │   │   │	 └── *.css 	   #libs css such as animate.min.css, swiper.min.css
+    │   │   │	 └── *.css 	   # libs css such as animate.min.css, swiper.min.css
     │   │   └── css.min.css
     │   └── js
     │       ├── libs
@@ -191,7 +190,7 @@ The result in  `dist/`
 
 ### 3.x.x
 
-重构结构
+重构项目结构
 
 
 
