@@ -6,6 +6,7 @@
         <a href="https://travis-ci.org/Sanchez3/generator-phaser-h5"><img alt="Travis CI Build Status" src="https://travis-ci.org/Sanchez3/generator-phaser-h5.svg?branch=master"></a>
         <a href="https://david-dm.org/Sanchez3/generator-phaser-h5"><img alt="dependencies status" src="https://david-dm.org/Sanchez3/generator-phaser-h5/status.svg"></a>
         <a href="https://david-dm.org/Sanchez3/generator-phaser-h5?type=dev"><img alt="devDependencies status" src="https://david-dm.org/Sanchez3/generator-phaser-h5/dev-status.svg"/></a>
+        <a href="https://codecov.io/gh/Sanchez3/generator-phaser-h5"><img alt="codecov" src="https://codecov.io/gh/Sanchez3/generator-phaser-h5/branch/master/graph/badge.svg" /></a>
         <a href="https://www.npmjs.com/package/generator-phaser-h5"><img alt="Downloads" src="https://img.shields.io/npm/dm/generator-phaser-h5.svg"></a>
     </div>
 </div>
