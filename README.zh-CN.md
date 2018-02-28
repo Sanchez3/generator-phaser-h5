@@ -11,6 +11,7 @@
     </div>
 </div>
 
+**Translations: [English](https://github.com/Sanchez3/generator-phaser-h5/blob/master/README.md)**
 
 **h5 ≠ `<h5></h5>` ,  h5 ≠ html5,  h5 ≠ car haval5.**
 
