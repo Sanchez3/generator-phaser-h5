@@ -28,7 +28,6 @@ describe('yo:phaser-h5', () => {
             'gulpfile.js',
             '.jshintrc',
             'src/assets/css/sass.scss',
-            'src/assets/css/css.css',
             'src/index.html',
             'package.json',
             'src/assets/js/main.js',
