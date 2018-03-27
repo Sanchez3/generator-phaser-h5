@@ -27,7 +27,6 @@ describe('yo:phaser-h5', () => {
             // add files you expect to exist here.
             'gulpfile.js',
             '.jshintrc',
-            'src/assets/css/sass.scss',
             'src/index.html',
             'package.json',
             'src/assets/js/main.js',
