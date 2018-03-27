@@ -16,7 +16,7 @@ describe('yo:phaser-h5', () => {
             .inTmpDir(dir => {
                 tmpdir = dir;
             })
-            .withOptions({ projectName: 'temp' }, { projectDesc: ' ' }, { projectLicense: 'MIT' }, { projectSass: 'Y' });
+            .withOptions({ projectName: 'temp' }, { projectDesc: ' ' }, { projectLicense: 'MIT' }, { projectSass: true });
     });
 
     afterEach(() => fsextra.remove(tmpdir));
