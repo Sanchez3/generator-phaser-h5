@@ -122,7 +122,7 @@ gulp.task('compile', ['clean'], function(cb) {
     ], cb);
 });
 
-gulp.task('sass', ['clean'], function(cb) {
+gulp.task('cleansass', ['clean'], function(cb) {
     pump([
         gulp.src(paths.sass),
         sass().on('error', sass.logError),
@@ -130,26 +130,14 @@ gulp.task('sass', ['clean'], function(cb) {
             keepSpecialComments: false,
             removeEmpty: true
         })),
-        rename({ suffix: '.min' }),
-        gulp.dest(paths.distcss)
-    ], cb);
-});
-
-
-gulp.task('cleancss', ['clean'], function(cb) {
-    pump([
-        gulp.src(paths.css),
-        gulpif(!watching, cleancss({
-            keepSpecialComments: false,
-            removeEmpty: true
-        })),
-        rename({ suffix: '.min' }),
+        rename({ basename: 'css', suffix: '.min' }),
         rev(),
         gulp.dest(paths.distcss),
         rev.manifest(),
         gulp.dest(paths.distrevcss)
     ], cb);
 });
+
 
 gulp.task('processhtml', ['clean'], function(cb) {
     pump([
@@ -159,7 +147,7 @@ gulp.task('processhtml', ['clean'], function(cb) {
     ], cb);
 });
 
-gulp.task('rev', ['compile', 'cleancss'], function(cb) {
+gulp.task('rev', ['compile', 'cleansass'], function(cb) {
     pump([
         gulp.src([paths.rev.revJson, paths.rev.src]),
         revCollector({
@@ -201,4 +189,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['connect', 'watch', 'build']);
-gulp.task('build', ['clean', 'copy', 'copycss', 'concatlibs', 'compile', 'sass', 'cleancss', 'htmlmin', 'rev']);
+gulp.task('build', ['clean', 'copy', 'copycss', 'concatlibs', 'compile', 'cleansass', 'htmlmin', 'rev']);

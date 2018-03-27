@@ -56,12 +56,22 @@ module.exports = class extends Generator {
             this
         );
         this.fs.copy(
-            this.templatePath('src/assets/**'),
-            this.destinationPath('src/assets/'),
+            this.templatePath('src/assets/img'),
+            this.destinationPath('src/assets/img'),
+            this
+        );
+        this.fs.copy(
+            this.templatePath('src/assets/js'),
+            this.destinationPath('src/assets/js'),
             this
         );
         mkdirp('src/assets/media');
         if (this.projectSass) {
+            this.fs.copy(
+                this.templatePath('src/assets/css/sass.scss'),
+                this.destinationPath('src/assets/css/sass.scss'),
+                this
+            );
             this.fs.copyTpl(
                 this.templatePath('_package_sass.json'),
                 this.destinationPath('package.json'),
@@ -73,6 +83,11 @@ module.exports = class extends Generator {
                 this
             );
         } else {
+            this.fs.copy(
+                this.templatePath('src/assets/css/css.css'),
+                this.destinationPath('src/assets/css/css.css'),
+                this
+            );
             this.fs.copyTpl(
                 this.templatePath('_package.json'),
                 this.destinationPath('package.json'),
