@@ -48,6 +48,7 @@ module.exports = class extends Generator {
         this.config.set('projectName', this.projectName);
         this.config.set('projectDesc', this.projectDesc);
         this.config.set('projectLicense', this.projectLicense);
+        this.config.set('projectSass', this.projectSass);
     }
     writing() {
         this.fs.copyTpl(
