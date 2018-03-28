@@ -54,8 +54,8 @@ describe('generator-phaser-h5', () => {
                 .withPrompts({ projectName: name, projectDesc: description })
                 .then(() => {
                     assert.fileContent([
-                        ['package.json', `"name": ${name}`],
-                        ['package.json', `"description": ${description}`]
+                        ['package.json', `"name": ${JSON.stringify(name)}`],
+                        ['package.json', `"description": ${JSON.stringify(description)}`]
                     ]);
                     assert.fileContent([
                         ['README.md', `# ${name}`],
