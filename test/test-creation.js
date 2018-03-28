@@ -36,7 +36,7 @@ describe('generator-phaser-h5', function() {
 
     function checkReadme() {
         assert.fileContent([
-            ['README.md', `# [${name}]`],
+            ['README.md', `# ${name}`],
             ['README.md', `${description}`]
         ]);
     }
