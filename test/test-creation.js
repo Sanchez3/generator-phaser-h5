@@ -22,8 +22,7 @@ describe('generator-phaser-h5', () => {
             assert.file([
                 'gulpfile.js',
                 'package.json',
-                '.jshintrc',
-                'README.md'
+                '.jshintrc'
             ]);
         }
 
@@ -42,12 +41,13 @@ describe('generator-phaser-h5', () => {
         function checkAssets() {
             assert.file([
                 'src/index.html',
+                'README.md',
                 'LICENSE',
                 'src/assets/css/css.css',
                 'src/assets/img/favicon.ico'
             ]);
         }
-    });, projectLicense: 'MIT', projectSass: true
+    });
     describe('using options', () => {
         it('projectName, projectDesc', () => {
             helpers.run(basedir)
