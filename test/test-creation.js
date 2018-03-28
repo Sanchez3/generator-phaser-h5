@@ -16,7 +16,7 @@ describe('yo:phaser-h5', () => {
             .inTmpDir(dir => {
                 tmpdir = dir;
             })
-            .withOptions({ projectName: 'temp' }, { projectDesc: ' ' }, { projectLicense: 'MIT' }, { projectSass: true });
+            .withPrompts({ projectName: 'temp' }, { projectDesc: ' ' }, { projectLicense: 'MIT' }, { projectSass: true });
     });
 
     afterEach(() => fsextra.remove(tmpdir));
@@ -35,9 +35,9 @@ describe('yo:phaser-h5', () => {
             'src/assets/js/entities/VideoConfig.js',
             'src/assets/js/states/boot.js',
             'src/assets/js/states/state1.js',
-            'src/assets/js/states/preloader.js'
+            'src/assets/js/states/preloader.js',
+            'src/assets/css/sass.scss'
         ];
-
         const files = expected.map(i => path.join(tmpdir, i));
         assert.file(files);
     });
