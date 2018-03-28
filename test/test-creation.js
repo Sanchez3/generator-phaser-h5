@@ -51,7 +51,7 @@ describe('generator-phaser-h5', () => {
     describe('using options', () => {
         it('projectName, projectDesc', () => {
             helpers.run(basedir)
-                .withPrompts({ projectName: name, projectDesc: description })
+                .withOptions({ projectName: name, projectDesc: description })
                 .then(() => {
                     assert.fileContent([
                         ['package.json', `"name": ${JSON.stringify(name)}`],
