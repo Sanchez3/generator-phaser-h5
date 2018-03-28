@@ -4,41 +4,71 @@ const assert = require('yeoman-assert');
 const fs = require('fs');
 const fsextra = require('fs-extra');
 const path = require('path');
+const chalk = require('chalk');
 
 const basedir = path.join(__dirname, '../generators/app');
+const name = 'test projectName';
+const description = 'test projectDesc';
 
-describe('yo:phaser-h5', () => {
+describe(chalk.bold.cyan('generator-phaser-h5'), () => {
 
-    let tmpdir;
+            let tmpdir;
 
-    beforeEach(() => {
-        return helpers.run(basedir)
-            .inTmpDir(dir => {
-                tmpdir = dir;
-            })
-            .withPrompts({ projectName: 'temp', projectDesc: ' ', projectLicense: 'MIT', projectSass: true });
-    });
+            beforeEach(() => {
+                return helpers.run(basedir)
+                    .inTmpDir(dir => {
+                        tmpdir = dir;
+                    })
+                    .withPrompts({ projectName: name, projectDesc: description, projectLicense: 'MIT', projectSass: true });
+            });
 
-    afterEach(() => fsextra.remove(tmpdir));
+            afterEach(() => fsextra.remove(tmpdir));
 
-    it('creates expected files', () => {
+            it('creates expected files', () => checkAssets().then(checkConfig).then(checkReadme).then(checkScripts);;
 
-        const expected = [
-            // add files you expect to exist here.
-            'gulpfile.js',
-            '.jshintrc',
-            'src/index.html',
-            'package.json',
-            'src/assets/js/main.js',
-            'src/assets/js/entities/Gesture.js',
-            'src/assets/js/entities/MovieClip.js',
-            'src/assets/js/entities/VideoConfig.js',
-            'src/assets/js/states/boot.js',
-            'src/assets/js/states/state1.js',
-            'src/assets/js/states/preloader.js',
-            'src/assets/css/sass.scss'
-        ];
-        const files = expected.map(i => path.join(tmpdir, i));
-        assert.file(files);
-    });
-});
+                function checkConfig() {
+                    assert.file([
+                        'gulpfile.js',
+                        '.jshintrc'
+                    ]);
+                    assert.fileContent([
+                        ['package.json', `"name": ${JSON.stringify(name)}`],
+                        ['package.json', `"description": ${JSON.stringify(description)}`]
+                    ]);
+                }
+
+                function checkReadme() {
+                    assert.fileContent([
+                        ['README.md', `# [${name}]`],
+                        ['README.md', `${description}`]
+                    ]);
+                }
+
+                function checkScripts() {
+                    assert.file([
+                        'src/assets/js/main.js',
+                        'src/assets/js/entities/Gesture.js',
+                        'src/assets/js/entities/MovieClip.js',
+                        'src/assets/js/entities/VideoConfig.js',
+                        'src/assets/js/states/boot.js',
+                        'src/assets/js/states/state1.js',
+                        'src/assets/js/states/preloader.js'
+                    ]);
+                }
+
+                function checkAssets() {
+                    // const expected = [
+                    //     'src/index.html',
+                    //     'src/LICENSE',
+                    //     'src/assets/css/sass.scss',
+                    //     'src/assets/img/favicon.ico'
+                    // ];
+                    // const files = expected.map(i => path.join(tmpdir, i));
+                    assert.file([
+                        'src/index.html',
+                        'src/LICENSE',
+                        'src/assets/css/sass.scss',
+                        'src/assets/img/favicon.ico'
+                    ]);
+                }
+            });
