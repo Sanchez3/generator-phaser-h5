@@ -66,7 +66,7 @@ describe(chalk.bold.cyan('generator-phaser-h5'), () => {
         // const files = expected.map(i => path.join(tmpdir, i));
         assert.file([
             'src/index.html',
-            'src/LICENSE',
+            'LICENSE',
             'src/assets/css/sass.scss',
             'src/assets/img/favicon.ico'
         ]);
