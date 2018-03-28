@@ -10,7 +10,7 @@ const basedir = path.join(__dirname, '../generators/app');
 const name = 'test projectName';
 const description = 'test projectDesc';
 
-describe(chalk.bold.cyan('generator-phaser-h5'), () => {
+describe(chalk.bold.cyan('generator-phaser-h5'), function() {
 
     let tmpdir;
 
