@@ -49,10 +49,10 @@ describe('generator-phaser-h5', () => {
         }
     });
     describe('using options', () => {
-        it('projectName, projectDesc', () => {
+        it('projectName, projectDesc', done => {
             helpers.run(basedir)
-                .withOptions({ projectName: name, projectDesc: description })
-                .then(() => {
+                .withPrompts({ projectName: name, projectDesc: description })
+                .on('end', () => {
                     assert.fileContent([
                         ['package.json', `"name": ${JSON.stringify(name)}`],
                         ['package.json', `"description": ${JSON.stringify(description)}`]
@@ -61,54 +61,60 @@ describe('generator-phaser-h5', () => {
                         ['README.md', `# ${name}`],
                         ['README.md', `${description}`]
                     ]);
-                })
+                    done();
+                });
         });
-        it('projectLicense: MIT', () => {
+        it('projectLicense: MIT', done => {
             helpers.run(basedir)
                 .withPrompts({ projectLicense: 'MIT' })
-                .then(() => {
+                .on('end', () => {
                     assert.file([
                         'LICENSE'
                     ]);
-                })
+                    done();
+                });
         });
-        it('projectLicense: Apache-2.0', () => {
+        it('projectLicense: Apache-2.0', done => {
             helpers.run(basedir)
                 .withPrompts({ projectLicense: 'Apache-2.0' })
-                .then(() => {
+                .on('end', () => {
                     assert.file([
                         'LICENSE'
                     ]);
-                })
+                    done();
+                });
         });
-        it('projectLicense: GPL-3.0', () => {
+        it('projectLicense: GPL-3.0', done => {
             helpers.run(basedir)
                 .withPrompts({ projectLicense: 'GPL-3.0' })
-                .then(() => {
+                .on('end', () => {
                     assert.file([
                         'LICENSE'
                     ]);
-                })
+                    done();
+                });
         });
-        it('projectLicense: Others', () => {
+        it('projectLicense: Others', done => {
             helpers.run(basedir)
                 .withPrompts({ projectLicense: 'Others' })
-                .then(() => {
+                .on('end', () => {
                     assert.file([
                         'LICENSE'
                     ]);
-                })
+                    done();
+                });
         });
-        it('projectSass: true', () => {
+        it('projectSass: true', done => {
             helpers.run(basedir)
                 .withPrompts({ projectSass: true })
-                .then(() => {
+                .on('end', () => {
                     assert.file([
                         'src/assets/css/sass.scss',
                         'gulpfile.js',
                         'package.json'
                     ]);
-                })
+                    done();
+                });
         });
     });
 
