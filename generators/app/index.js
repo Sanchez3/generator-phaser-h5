@@ -29,7 +29,7 @@ module.exports = class extends Generator {
                 type: 'list',
                 name: 'projectLicense',
                 message: 'Please choose license:',
-                choices: ['MIT', 'Apache-2.0', 'GPL-3.0', 'Others']
+                choices: ['MIT', 'Apache-2.0', 'GPL-3.0', 'Others'],
                 default: 'MIT'
             },
             {
