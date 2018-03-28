@@ -236,7 +236,7 @@
             // };
             // this.load.atlas('fighter', '../assets/img/fighter.png', null, fData);
 
-            //video 移动端无法监控 
+            //wechat can not support 
             // this.load.video('pv', '../assets/video/pv.mp4');
             // this.load.spritesheet('cloader', '../assets/img/qloader.png', 128, 128, 12);
             //p2

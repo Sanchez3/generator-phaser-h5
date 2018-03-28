@@ -136,9 +136,6 @@
             //         this.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;
             //         this.scale.setUserScale(window.innerWidth/750,window.innerWidth/750,0,0);
             //     }
-            //
-            //
-            //     // $('#babysiri-game').find('canvas').css('bottom','0');
             // }
             this.game.state.start('Preloader');
         }
