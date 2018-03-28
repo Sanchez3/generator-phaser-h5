@@ -24,7 +24,7 @@ describe(chalk.bold.cyan('generator-phaser-h5'), () => {
 
     afterEach(() => fsextra.remove(tmpdir));
 
-    it('creates expected files', () => helpers.then(checkAssets).then(checkConfig).then(checkReadme).then(checkScripts));
+    it('creates expected files', () => checkAssets().then(checkConfig()).then(checkReadme()).then(checkScripts()));
 
     function checkConfig() {
         assert.file([
