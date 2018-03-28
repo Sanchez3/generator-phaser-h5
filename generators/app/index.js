@@ -29,7 +29,8 @@ module.exports = class extends Generator {
                 type: 'list',
                 name: 'projectLicense',
                 message: 'Please choose license:',
-                choices: ['MIT', 'ISC', 'Apache-2.0', 'AGPL-3.0']
+                choices: ['MIT', 'Apache-2.0', 'GPL-3.0', 'Others']
+                default: 'MIT'
             },
             {
                 type: 'confirm',
@@ -38,9 +39,9 @@ module.exports = class extends Generator {
                 default: false
             }
         ]).then(answers => {
-            this.projectName = answers.projectName ? answers.projectName : ' ';
-            this.projectDesc = answers.projectDesc ? answers.projectDesc : ' ';
-            this.projectLicense = answers.projectLicense || 'MIT';
+            this.projectName = answers.projectName ? answers.projectName : foldername;
+            this.projectDesc = answers.projectDesc ? answers.projectDesc : '';
+            this.projectLicense = answers.projectLicense ? (answers.projectLicense === 'Others' ? '' : answers.projectLicense) : 'MIT';
             this.projectSass = answers.projectSass || false;
         });
     }
@@ -51,9 +52,15 @@ module.exports = class extends Generator {
         this.config.set('projectSass', this.projectSass);
     }
     writing() {
+        mkdirp('src/assets/media');
         this.fs.copyTpl(
             this.templatePath('src/index.html'),
             this.destinationPath('src/index.html'),
+            this
+        );
+        this.fs.copyTpl(
+            this.templatePath('src/README.md'),
+            this.destinationPath('src/README.md'),
             this
         );
         this.fs.copy(
@@ -66,7 +73,43 @@ module.exports = class extends Generator {
             this.destinationPath('src/assets/js'),
             this
         );
-        mkdirp('src/assets/media');
+        this.fs.copy(
+            this.templatePath('jshintrc'),
+            this.destinationPath('.jshintrc'),
+            this
+        );
+        switch (this.projectLicense) {
+            case 'MIT':
+                this.fs.copy(
+                    this.templatePath('LICENSE_MIT'),
+                    this.destinationPath('LICENSE'),
+                    this
+                );
+                break;
+            case 'Apache-2.0':
+                this.fs.copy(
+                    this.templatePath('LICENSE_APACHE'),
+                    this.destinationPath('LICENSE'),
+                    this
+                );
+                break;
+            case 'GPL-3.0':
+                this.fs.copy(
+                    this.templatePath('LICENSE_GPL'),
+                    this.destinationPath('LICENSE'),
+                    this
+                );
+                break;
+            case 'Others':
+                this.fs.write(this.destinationPath('LICENSE'), '')
+                break;
+            default:
+                this.fs.copy(
+                    this.templatePath('LICENSE_MIT'),
+                    this.destinationPath('LICENSE'),
+                    this
+                );
+        }
         if (this.projectSass) {
             this.fs.copy(
                 this.templatePath('src/assets/css/sass.scss'),
@@ -101,15 +144,10 @@ module.exports = class extends Generator {
             );
         }
 
-        this.fs.copy(
-            this.templatePath('jshintrc'),
-            this.destinationPath('.jshintrc'),
-            this
-        );
 
 
     }
-    install() { //安装依赖
+    install() {
         this.installDependencies({ bower: false });
     }
 };
