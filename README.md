@@ -204,6 +204,10 @@ Not only for Phaser , Add Dependencies you want , Without Bower
 
 Rebuild Directory Structure
 
+### 4.x.x
+
+Refactor Generatorm , Fix tests
+
 
 
 ## Reference
