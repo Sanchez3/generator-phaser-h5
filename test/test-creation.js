@@ -4,13 +4,12 @@ const assert = require('yeoman-assert');
 const fs = require('fs');
 const fsextra = require('fs-extra');
 const path = require('path');
-const chalk = require('chalk');
 
 const basedir = path.join(__dirname, '../generators/app');
 const name = 'test projectName';
 const description = 'test projectDesc';
 
-describe(chalk.bold.cyan('generator-phaser-h5'), function() {
+describe('generator-phaser-h5', function() {
 
     let tmpdir;
 
@@ -69,7 +68,11 @@ describe(chalk.bold.cyan('generator-phaser-h5'), function() {
             'src/assets/img/favicon.ico'
         ]);
     }
-    it('creates expected files', () => checkAssets().then(checkConfig).then(checkReadme).then(checkScripts));
-
+    it('creates expected files', () => {
+        checkAssets();
+        checkConfig();
+        checkReadme();
+        checkScripts();
+    });
 
 });
