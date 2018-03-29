@@ -206,7 +206,7 @@ Rebuild Directory Structure
 
 ### 4.x.x
 
-Refactor Generatorm , Fix tests
+Refactor Generator , Fix tests
 
 
 
