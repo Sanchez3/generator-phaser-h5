@@ -163,6 +163,8 @@ Frontend environments evolve rapidly nowadays, modern browsers have already impl
     │           └── main.js    
     │
     ├── node_modules
+    ├── README.md
+    ├── LICENSE
     ├── index.html
     ├── package.json
     ├── gulpfile.js

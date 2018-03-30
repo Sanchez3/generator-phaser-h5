@@ -153,6 +153,8 @@ The result in  `dist/`
     │           └── main.js    
     │
     ├── node_modules
+    ├── README.md
+    ├── LICENSE
     ├── index.html
     ├── package.json
     ├── gulpfile.js
