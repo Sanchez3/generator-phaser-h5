@@ -9,7 +9,7 @@ const basedir = path.join(__dirname, '../generators/app');
 const name = 'test projectName';
 const description = 'test projectDesc';
 
-describe('generator-phaser-h5', () => {
+describe('yo:phaser-h5', () => {
     describe('defaults', () => {
         it('creates expected files', () => {
             helpers.run(basedir)
