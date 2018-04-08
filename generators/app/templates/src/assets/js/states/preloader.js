@@ -257,7 +257,7 @@
             that.pgGraphics = this.add.graphics(0, 0);
             var style = {
                 fontStyle: 'italic',
-                font: '"Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei"',
+                font: 'Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei',
                 fontSize: 19,
                 fill: '#000',
                 align: 'center'
