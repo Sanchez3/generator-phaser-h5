@@ -2,8 +2,15 @@
  * Created by Sanchez 
  */
 'use strict';
-
-window.game = new Phaser.Game('100', '100', Phaser.AUTO, 'canvas-wrapper', null, true);
+var config={
+    'width':'100',
+    'height':'100',
+    'render':Phaser.AUTO,
+    'parent':'canvas-wrapper',
+    'resolution':window.devicePixelRatio,
+    'transparent':true
+}
+window.game = new Phaser.Game(config);
 window.game.state.add('Boot', require('./states/boot'));
 window.game.state.add('Preloader', require('./states/preloader'));
 window.game.state.add('State1', require('./states/state1'));
