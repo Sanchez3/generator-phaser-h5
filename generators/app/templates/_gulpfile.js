@@ -29,7 +29,7 @@ paths = {
     libs: {
         js: [
             'node_modules/howler/dist/howler.min.js',
-            'node_modules/phaser/build/phaser.min.js',
+            'node_modules/phaser-ce/build/phaser.min.js',
             'node_modules/swiper/dist/js/swiper.min.js'
         ],
         css: [
