@@ -5,7 +5,7 @@
 var config={
     'width':'100',
     'height':'100',
-    'render':Phaser.AUTO,
+    'renderer':Phaser.AUTO,
     'parent':'canvas-wrapper',
     'resolution':window.devicePixelRatio,
     'transparent':true
