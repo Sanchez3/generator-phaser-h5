@@ -94,7 +94,7 @@ Frontend environments evolve rapidly nowadays, modern browsers have already impl
 *Note:  `npm install <packages> --save-dev`*
 
 - [browserify](https://github.com/substack/node-browserify)  for bundling up all of your dependencies
-- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'concatlibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml', 'rev', etc.
+- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'concatlibs', 'compile', 'autoprefixer', minifycss', 'processhtml', 'minifyhtml', 'rev', etc.
   - [gulp-sass](https://www.npmjs.com/package/gulp-sass) for converting to css (Optional)
 - [jshint](http://jshint.com/)  for Static Code Analysis Tool
 - [Babel](https://babeljs.io/) for the latest version of JavaScript through syntax transformers
@@ -102,7 +102,7 @@ Frontend environments evolve rapidly nowadays, modern browsers have already impl
 ### dependencies:
 *Note:  `npm install <packages>`*
 
-- [phaser-official](https://phaser.io/)  for HTML5 games and 2d canvas
+- [phaser-ce](https://github.com/photonstorm/phaser-ce)  for HTML5 games and 2d canvas
 - [howler.js](https://howlerjs.com/)  for audio 
 - ~~[jquery](https://jquery.com/)~~  [ajax](https://github.com/fdaciuk/ajax)  for ajax
 - [Gsap](https://greensock.com/gsap)  for javascript animation
@@ -125,7 +125,7 @@ Frontend environments evolve rapidly nowadays, modern browsers have already impl
 
 - Cdn  [jsDelivr](http://www.jsdelivr.com/), [cdnjs](https://cdnjs.com/), [bootcdn](http://www.bootcdn.cn/) :  
   ```html
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.2/phaser.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser-ce/2.10.5/phaser.js"></script>
   ```
 
 - [browserify](https://github.com/substack/node-browserify#brequirefile-opts)  Make `file` available from outside the bundle with `require(file)`
