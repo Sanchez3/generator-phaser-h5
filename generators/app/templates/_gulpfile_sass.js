@@ -20,6 +20,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
     babel = require('gulp-babel'),
+    autoprefixer = require('gulp-autoprefixer'),
     paths;
 
 var watching = false;
@@ -31,12 +32,10 @@ paths = {
     libs: {
         js: [
             'node_modules/howler/dist/howler.min.js',
-            'node_modules/phaser-ce/build/phaser.min.js',
-            'node_modules/swiper/dist/js/swiper.min.js'
+            'node_modules/phaser-ce/build/phaser.min.js'
         ],
         css: [
-            'node_modules/animate.css/animate.min.css',
-            'node_modules/swiper/dist/css/swiper.min.css'
+            'node_modules/animate.css/animate.min.css'
         ]
     },
     js: ['src/assets/js/*.js', 'src/assets/js/**/*.js'],
@@ -126,6 +125,10 @@ gulp.task('cleansass', ['clean'], function(cb) {
     pump([
         gulp.src(paths.sass),
         sass().on('error', sass.logError),
+        autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }),
         gulpif(!watching, cleancss({
             keepSpecialComments: false,
             removeEmpty: true
