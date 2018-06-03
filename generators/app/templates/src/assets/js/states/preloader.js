@@ -25,16 +25,15 @@
 
             // image
             // this.load.image(key, url, overwrite);
+            this.load.image('favicon', './assets/img/favicon.ico');
             this.load.start();
-
         },
         drawPieProgress: function(_progress) {
             var that = this;
             that.pgGraphics.clear();
             that.pgGraphics.lineStyle(6, 0x29ABE2);
-            that.pgGraphics.arc(this.game.width / 2, this.game.height / 2, 45, this.game.math.degToRad(270), this.game.math.degToRad(360 * _progress / 100 + 270), false);
+            that.pgGraphics.arc(this.world.centerX, this.world.centerY, 45, this.math.degToRad(270), this.math.degToRad(360 * _progress / 100 + 270), false);
             that.pgGraphics.endFill();
-
         },
         create: function() {
             var that = this;
@@ -46,7 +45,7 @@
                 fill: '#000',
                 align: 'center'
             };
-            that.progress = this.add.text(this.game.width / 2, this.game.height / 2 + 5, '0%', style);
+            that.progress = this.add.text(this.world.centerX, this.world.centerY + 5, '0%', style);
             that.progress.anchor.setTo(0.5);
             this.load.onFileComplete.add(that.onfileComplete, this);
             this.load.onLoadComplete.addOnce(that.onLoadComplete, this);
@@ -54,13 +53,16 @@
 
         },
         onLoadComplete: function() {
-            var that = this;
-            that.game.state.start('State1');
-            return;
-
+            this.state.start('State1');
         },
+        // pg: { v: 0 },
         onfileComplete: function(progress, cacheKey, success, totalLoaded, totalFiles) {
             var that = this;
+            //tween progress
+            // this.add.tween(that.pg).to({ v: progress }, 300, null, true).onUpdateCallback(function() {
+            //     that.progress.text = this.math.roundTo(that.pg.v) + '%';
+            //     that.drawPieProgress(that.pg.v);
+            // }, this);
             that.drawPieProgress(progress);
             that.progress.text = progress + '%';
         }

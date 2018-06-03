@@ -2,13 +2,13 @@
  * Created by Sanchez 
  */
 'use strict';
-var config={
-    'width':'100',
-    'height':'100',
-    'renderer':Phaser.AUTO,
-    'parent':'canvas-wrapper',
-    'resolution':window.devicePixelRatio,
-    'transparent':true
+var config = {
+    width: '100',
+    height: '100',
+    renderer: Phaser.AUTO,
+    parent: 'canvas-wrapper',
+    resolution: window.devicePixelRatio,
+    transparent: true
 }
 window.game = new Phaser.Game(config);
 window.game.state.add('Boot', require('./states/boot'));

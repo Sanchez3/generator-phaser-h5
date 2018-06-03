@@ -29,7 +29,7 @@
         create: function() {
             var that = this;
             // configure game
-            this.game.input.maxPointers = 1;
+            this.input.maxPointers = 1;
             this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
             // this.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;
             this.scale.pageAlignHorizontally = true;
@@ -40,8 +40,6 @@
             // if (this.game.device.desktop) {
             //     this.game.scale.pageAlignHorizontally = true;
             // } else {
-            //
-            //
             //     if(!window.android){
             //         this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
             //         // this.scale.pageAlignHorizontally = true;
@@ -51,7 +49,7 @@
             //         this.scale.setUserScale(window.innerWidth/750,window.innerWidth/750,0,0);
             //     }
             // }
-            this.game.state.start('Preloader');
+            this.state.start('Preloader');
         }
 
     };
