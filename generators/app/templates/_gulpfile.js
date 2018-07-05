@@ -18,7 +18,7 @@ var gulp = require('gulp'),
     revCollector = require('gulp-rev-collector'),
     buffer = require('gulp-buffer'),
     concat = require('gulp-concat'),
-    babel = require('gulp-babel'),
+    babelify = require("babelify"),
     autoprefixer = require('gulp-autoprefixer'),
     paths;
 
@@ -103,7 +103,7 @@ gulp.task('compile', ['clean'], function(cb) {
             fullPaths: true,
             entries: [paths.entry],
             debug: watching
-        }).bundle(),
+        }).transform(babelify, { presets: ['env'] }).bundle(),
         source('main.min.js'),
         jshint('.jshintrc'),
         jshint.reporter('default'),
