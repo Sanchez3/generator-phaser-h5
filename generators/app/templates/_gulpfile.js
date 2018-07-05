@@ -108,9 +108,6 @@ gulp.task('compile', ['clean'], function(cb) {
         jshint('.jshintrc'),
         jshint.reporter('default'),
         buffer(),
-        babel({
-            presets: ['env']
-        }),
         gulpif(!watching, streamify(uglify())),
         rev(),
         gulp.dest(paths.distjs),
