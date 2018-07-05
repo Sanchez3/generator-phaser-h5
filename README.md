@@ -95,9 +95,9 @@ Frontend environments evolve rapidly nowadays, modern browsers have already impl
 
 - [browserify](https://github.com/substack/node-browserify)  for bundling up all of your dependencies
 - [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'concatlibs', 'compile', 'autoprefixer', minifycss', 'processhtml', 'minifyhtml', 'rev', etc.
-  - [gulp-sass](https://www.npmjs.com/package/gulp-sass) for converting to css (Optional)
+  - [gulp-sass](https://www.npmjs.com/package/gulp-sass)  for converting to css (Optional)
 - [jshint](http://jshint.com/)  for Static Code Analysis Tool
-- [Babel](https://babeljs.io/) for the latest version of JavaScript through syntax transformers
+- [babelify](https://github.com/babel/babelify/)  for [Babel](https://github.com/babel/babel) [browserify](https://github.com/substack/node-browserify) transform
 
 ### dependencies:
 *Note:  `npm install <packages>`*
@@ -128,7 +128,7 @@ Frontend environments evolve rapidly nowadays, modern browsers have already impl
   <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser-ce/2.10.5/phaser.js"></script>
   ```
 
-- [browserify](https://github.com/substack/node-browserify#brequirefile-opts)  Make `file` available from outside the bundle with `require(file)`
+- [browserify](https://github.com/substack/node-browserify#brequirefile-opts)  Make `file` available from outside the bundle with `require(file)` (`import(file)`)
 
 - [browserify-shim](https://github.com/thlorenz/browserify-shim)  Make CommonJS-Incompatible Files Browserifyable
 
