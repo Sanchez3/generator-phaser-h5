@@ -19,7 +19,7 @@ var gulp = require('gulp'),
     buffer = require('gulp-buffer'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
-    babel = require('gulp-babel'),
+    babelify = require("babelify"),
     autoprefixer = require('gulp-autoprefixer'),
     paths;
 
@@ -105,14 +105,11 @@ gulp.task('compile', ['clean'], function(cb) {
             fullPaths: true,
             entries: [paths.entry],
             debug: watching
-        }).bundle(),
+        }).transform(babelify, { presets: ['env'] }).bundle(),
         source('main.min.js'),
         jshint('.jshintrc'),
         jshint.reporter('default'),
         buffer(),
-        babel({
-            presets: ['env']
-        }),
         gulpif(!watching, streamify(uglify())),
         rev(),
         gulp.dest(paths.distjs),
@@ -181,7 +178,7 @@ gulp.task('html', ['build'], function(cb) {
 gulp.task('connect', function() {
     connect.server({
         root: ['./dist'],
-        host:'0.0.0.0',
+        host: '0.0.0.0',
         port: 9000,
         livereload: true
     });
