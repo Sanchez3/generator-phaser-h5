@@ -119,7 +119,7 @@ The result in  `dist/`
   <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser-ce/2.10.5/phaser.js"></script>
   ```
 
-- [browserify](https://github.com/substack/node-browserify#brequirefile-opts)  Make `file` available from outside the bundle with `require(file)` (`import(file)`)
+- [browserify](https://github.com/substack/node-browserify#brequirefile-opts)  Make `file` available from outside the bundle with `require(file)` (Also with `import(file)` because of [babelify](https://github.com/babel/babelify/))
 
 - [browserify-shim](https://github.com/thlorenz/browserify-shim)  Make CommonJS-Incompatible Files Browserifyable
 
