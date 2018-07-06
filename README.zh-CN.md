@@ -85,7 +85,7 @@ The result in  `dist/`
 *Note:  `npm install <packages> --save-dev`*
 
 - [browserify](https://github.com/substack/node-browserify)  for bundling up all of your dependencies
-- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'concatlibs', 'compile', 'autoprefixer', minifycss', 'processhtml', 'minifyhtml', 'rev', etc.
+- [gulp-plugins](http://gulpjs.com/plugins/)  for 'clean', 'copy', 'concatlibs', 'compile', 'autoprefixer', 'minifycss', 'processhtml', 'minifyhtml', 'rev', etc.
   - [gulp-sass](https://www.npmjs.com/package/gulp-sass) for converting to css (Optional)
 - [jshint](http://jshint.com/)  for Static Code Analysis Tool
 - [babelify](https://github.com/babel/babelify/)  for [Babel](https://github.com/babel/babel) [browserify](https://github.com/substack/node-browserify) transform
