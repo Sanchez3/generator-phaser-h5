@@ -127,7 +127,7 @@ gulp.task('cleansass', ['clean'], function(cb) {
             cascade: false
         }),
         gulpif(!watching, cleancss({
-            keepSpecialComments: false,
+            keepSpecialComments: '*',
             removeEmpty: true
         })),
         rename({ basename: 'css', suffix: '.min' }),
