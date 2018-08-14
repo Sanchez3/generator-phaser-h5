@@ -25,7 +25,7 @@
 
             // image
             // this.load.image(key, url, overwrite);
-            this.load.image('favicon', './assets/img/favicon.ico');
+            this.load.image('favicon', '/assets/img/favicon.ico');
             this.load.start();
         },
         drawPieProgress: function(_progress) {
