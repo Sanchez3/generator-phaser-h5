@@ -100,7 +100,6 @@ gulp.task('compile', ['clean'], function(cb) {
         browserify({
             cache: {},
             packageCache: {},
-            fullPaths: true,
             entries: [paths.entry],
             debug: watching
         }).transform(babelify, { presets: ['env'] }).bundle(),
