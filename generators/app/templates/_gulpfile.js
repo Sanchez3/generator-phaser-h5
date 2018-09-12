@@ -80,7 +80,6 @@ gulp.task('compile', ['clean'], function(cb) {
     // var bundler = browserify({
     //     cache: {},
     //     packageCache: {},
-    //     fullPaths: true,
     //     entries: [paths.entry],
     //     debug: watching
     // });
