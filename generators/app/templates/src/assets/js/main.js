@@ -65,7 +65,7 @@ window.h5 = {
                 lastInnerHeight,
                 noChangeCount;
             end = function() {
-                // 'orientationchangeend'
+                //'orientationchangeend'
                 clearInterval(interval);
                 clearTimeout(timeout);
                 interval = null;
@@ -76,7 +76,7 @@ window.h5 = {
                 if (window.innerWidth === lastInnerWidth && window.innerHeight === lastInnerHeight) {
                     noChangeCount++;
                     if (noChangeCount === noChangeCountToEnd) {
-                        // The interval resolved the issue first.
+                        //The interval resolved the issue first.
                         end();
                     }
                 } else {
@@ -86,7 +86,7 @@ window.h5 = {
                 }
             });
             timeout = setTimeout(function() {
-                // The timeout happened first.
+                //The timeout happened first.
                 end();
             }, noEndTimeout);
         });
@@ -108,7 +108,8 @@ window.onload = function() {
 
 function showStats() {
     var stats = new Stats();
-    stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
+    //0: fps, 1: ms, 2: mb, 3+: custom
+    stats.showPanel(0); 
     var fs = document.createElement('div');
     fs.style.position = 'absolute';
     fs.style.left = 0;
@@ -119,7 +120,7 @@ function showStats() {
 
     function animate() {
         stats.begin();
-        // monitored code goes here
+        //monitored code goes here
         stats.end();
         requestAnimationFrame(animate);
     }
