@@ -31,10 +31,10 @@ window.h5 = {
     },
     rootResize: function() {
         var wFsize;
-        
+
         //iphone6/6s/7/8 orientation=portrait screen.width=750px screen.height=1334px / WeChat window.innerWidth=750px window.innerHeight=1206px 
-        var wWidth = document.documentElement.clientWidth ||window.innerWidth;
-        var wHeight = document.documentElement.clientHeight ||window.innerHeight;
+        var wWidth = document.documentElement.clientWidth || window.innerWidth;
+        var wHeight = document.documentElement.clientHeight || window.innerHeight;
 
         if (wWidth > wHeight) {
             wFsize = wHeight / 750 * 100;
