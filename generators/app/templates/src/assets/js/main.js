@@ -55,7 +55,18 @@ window.h5 = {
     cssInit: function() {
         var that = this;
         var noChangeCountToEnd = 100,
-            noEndTimeout = 1000;
+            noEndTimeout = 1000;g
+        // var body = document.body;
+        // var html = document.documentElement;
+        // var height = Math.max(
+        //     body.offsetHeight,
+        //     body.scrollHeight,
+        //     html.clientHeight,
+        //     html.offsetHeight,
+        //     html.scrollHeight
+        // );
+        // document.getElementsByTagName('html')[0].style.height = height + 'px';
+        // document.getElementsByTagName('body')[0].style.height = height + 'px';
         that.rootResize();
         window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', function() {
             var interval,
@@ -109,7 +120,7 @@ window.onload = function() {
 function showStats() {
     var stats = new Stats();
     //0: fps, 1: ms, 2: mb, 3+: custom
-    stats.showPanel(0); 
+    stats.showPanel(0);
     var fs = document.createElement('div');
     fs.style.position = 'absolute';
     fs.style.left = 0;
