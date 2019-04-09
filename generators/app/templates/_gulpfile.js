@@ -25,7 +25,7 @@ var gulp = require('gulp'),
 var watching = false;
 
 paths = {
-    assets: ['src/assets/**/*', '!src/assets/css/*', '!src/assets/js/*', '!src/assets/js/**/*.js'],
+    assets: ['src/assets/**/*', '!src/assets/css/**', '!src/assets/js/**', '!src/assets/.*', '!src/assets/**/.*'],
     css: ['src/assets/css/*.css'],
     libs: {
         js: [
@@ -180,7 +180,7 @@ gulp.task('connect', function() {
 
 gulp.task('watch', function() {
     watching = true;
-    return gulp.watch(['./src/index.html', paths.css, paths.js], ['build', 'html']);
+    return gulp.watch(['./src/index.html', paths.assets, paths.css, paths.js], ['build', 'html']);
 });
 
 gulp.task('default', ['connect', 'watch', 'build']);
