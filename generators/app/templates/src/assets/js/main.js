@@ -55,7 +55,7 @@ window.h5 = {
     cssInit: function() {
         var that = this;
         var noChangeCountToEnd = 100,
-            noEndTimeout = 1000;g
+            noEndTimeout = 1000;
         // var body = document.body;
         // var html = document.documentElement;
         // var height = Math.max(
